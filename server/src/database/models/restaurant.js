@@ -1,16 +1,17 @@
 module.exports = (sequelize, DataTypes) => {
-  const Restaurant = sequelize.define('Restaurant', {
+  const Restaurant = sequelize.define('restaurant', {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     phone: DataTypes.STRING,
   }, {
+    timestamps: false,
     sequelize,
-    modelName: 'Restaurant',
+    modelName: 'restaurant',
   });
 
   Restaurant.associate = ({ item }) => {
     Restaurant.hasMany(item, {
-      foreignKey: 'id',
+      foreignKey: 'restaurantId',
       as: 'items',
       onDelete: 'CASCADE'
     });
