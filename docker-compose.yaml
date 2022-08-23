@@ -1,0 +1,46 @@
+version: "3.1"
+
+services:
+  server:
+    container_name: server
+    build: ./server
+    platform: linux/amd64
+    ports:
+      - 3001:3001
+    volumes:
+      - ./server:/usr/app/server
+    environment:
+      - PORT=3001
+      - DB_USER=root
+      - DB_PASSWORD=rest123
+      - DB_HOST=db
+      - DB_NAME=RESTs
+      - DB_PORT=3306
+      - DB_DIALECT=mysql
+      - SECRET=5engds014762109347kwpoiqn98473
+    working_dir: /usr/app/server
+    stdin_open: true
+    tty: true
+    restart: always
+    depends_on:
+      - database
+  database:
+    container_name: database
+    image: mysql:5.7
+    platform: linux/amd64
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=rest123
+
+  client:
+    container_name: client
+    build: ./client
+    volumes:
+      - ./client:/usr/app/client
+    platform: linux/amd64
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
