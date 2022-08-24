@@ -67,3 +67,7 @@ Atualmente a aplicação não possuí opção de cadastro, utilize um destes usu
   - Usuário 2: `gabribo@yahoo.com - gabribas5839`
 
 Após logado e autenticado, basta conferir os restaurantes disponíveis e vasculhar seus cardápios 😋
+
+<hr />
+
+> README sendo constantemente atualizado ✍
