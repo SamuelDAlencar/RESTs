@@ -51,6 +51,13 @@ const LoginStyle = styled.main`
     width: 80%;
   }
 
+  span {
+    margin-top: 5px;
+    color: #ff8080;
+    align-self: flex-start;
+    text-align: left;
+  }
+
   input {
     border: 0;
     background-color: white;
@@ -78,6 +85,15 @@ const LoginStyle = styled.main`
     color: white;
     background-color: #42855B;
     transition: ease-in-out 0.1s;
+  }
+
+  button:disabled {
+    background-color: #D2D79F;
+  }
+
+  button:disabled:hover {
+    cursor: not-allowed;
+    background-color: #D2D79F;
   }
 
   button:hover {

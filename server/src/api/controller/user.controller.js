@@ -1,7 +1,7 @@
 const service = require('../service/user.service');
 
 const getByEmail = async (req, res) => {
-  const { email } = req.body;
+  const { email } = req.params;
 
   const user = await service.getByEmail(email);
 
