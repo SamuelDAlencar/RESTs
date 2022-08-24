@@ -1,0 +1,27 @@
+{
+  "name": "mvp_grao-direto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:apps": "npm i && cd client/ && npm i && cd ../server && npm i",
+    "server": "npm start --prefix client",
+    "client": "npm start --prefix server",
+    "start:apps": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelDAlencar/mvp_grao-direto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamuelDAlencar/mvp_grao-direto/issues"
+  },
+  "homepage": "https://github.com/SamuelDAlencar/mvp_grao-direto#readme",
+  "devDependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
