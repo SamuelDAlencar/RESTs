@@ -54,8 +54,9 @@ Via Docker:
 Sem Docker:
 
   - Clone o projeto: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
-  - Dentro da raiz: `npm install:apps`
-  - Ainda na raiz: `npm start:apps`
-  - Caso não ocorra nenhum erro, acesse a página e faça login: `http://localhost:3000/login`
-
-⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙⚙
+  - Dentro da raiz: `npm run install:apps`
+  - Ainda na raiz: `npm run start:apps`
+  - Caso não ocorra nenhum erro e a aplicação ainda não tenha aberto no browser, acesse essa URL e faça o login: `http://localhost:3000/login`
+    > Usuário 1: `fred@graodireto.com.br - 123Fred`
+    > Usuário 2: `samuca@gmail.com - 1samu9`
+    > Usuário 2: `gabribo@yahoo.com - gabribas5839`
