@@ -9,7 +9,9 @@ const getByEmail = async (email) => {
 
   if (!user) throw httpError(404, 'Não encontramos um usuário com esse email, quer fazer um cadastro?');
 
-  return user;
+  const { id, username } = user;
+
+  return { id, email, username };
 };
 
 const logIn = async (email, password) => {
@@ -21,7 +23,9 @@ const logIn = async (email, password) => {
   if (!user) throw httpError(404, 'Não encontramos um usuário com esse email, quer fazer um cadastro?');
   if (user.password !== encryptedPassword) throw httpError(403, 'Senha incorreta');
   
-  return user;
+  const { id, username } = user;
+
+  return { id, email, username };
 };
 
 module.exports = {
