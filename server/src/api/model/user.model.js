@@ -1,10 +1,10 @@
 const { user } = require('../../database/models');
 
-const logIn = (email) => user
+const getByEmail = (email) => user
   .findOne({
     where: { email },
   });
 
 module.exports = {
-  logIn
+  getByEmail
 };
