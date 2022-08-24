@@ -38,6 +38,7 @@ Sem Docker:
 
   - Versão *igual* ou *superior* a `16` do `node`
   - Instância do [`MySQL`](https://www.mysql.com/) rodando na porta `3306`
+    > ⚠ Atualize as variáveis de ambiente com a senha do seu banco ⚠
   - Portas `3000` e `3001` da sua máquina liberadas
 
 ## 🚀 Instalando localmente
