@@ -57,6 +57,8 @@ Sem Docker:
   - Dentro da raiz: `npm run install:apps`
   - Ainda na raiz: `npm run start:apps`
   - Caso não ocorra nenhum erro e a aplicação ainda não tenha aberto no browser, acesse essa URL e faça o login: `http://localhost:3000/login`
-    > Usuário 1: `fred@graodireto.com.br - 123Fred`
-    > Usuário 2: `samuca@gmail.com - 1samu9`
-    > Usuário 2: `gabribo@yahoo.com - gabribas5839`
+
+Atualmente a aplicação não possuí opção de cadastro, os usuário já cadastrados são:  
+  - Usuário 1: `fred@graodireto.com.br - 123Fred`
+  - Usuário 2: `samuca@gmail.com - 1samu9`
+  - Usuário 2: `gabribo@yahoo.com - gabribas5839`
