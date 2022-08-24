@@ -3,18 +3,19 @@ import loginBackground from '../../images/login-background.jpg';
 
 const LoginStyle = styled.main`
   background-image: url(${loginBackground});
+  background-position: top;
   height: 100vh;
   display: flex;
   margin: auto;
   
   section {
     color: white;
-    margin-left: 30px;
+    margin: 0 5vw;
     background-color: #90B77D;
-    width: 35%;
-    height: 100vh;
+    width: 580px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     /* Efeito de vidro feito pelo site: https://css.glass */
     background: rgba(72, 56, 56, 0.77);
@@ -25,7 +26,9 @@ const LoginStyle = styled.main`
 
   .back_arrow_icon {
     position: absolute;
+    margin: 0 10px;
     left: 0;
+    top: 0;
     font-size: 60px;
     transition: ease-in-out 0.1s;
   }
@@ -37,14 +40,12 @@ const LoginStyle = styled.main`
 
   h1 {
     font-size: 400%;
-    margin: 20%;
   }
 
   label {
     color: rgba(255, 255, 255, 0.70);
     text-align: center;
     font-size: 150%;
-    margin: 10%;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -69,7 +70,6 @@ const LoginStyle = styled.main`
   }
 
   button {
-    margin-top: 100px;
     font-size: 160%;
     width: 80%;
     padding: 20px 80px;
