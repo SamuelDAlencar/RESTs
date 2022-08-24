@@ -65,3 +65,5 @@ Atualmente a aplicação não possuí opção de cadastro, utilize um destes usu
   - Usuário 1: `fred@graodireto.com.br - 123Fred`
   - Usuário 2: `samuca@gmail.com - 1samu9`
   - Usuário 2: `gabribo@yahoo.com - gabribas5839`
+
+Após logado e autenticado, basta conferir os restaurantes disponíveis e vasculhar seus cardápios 😋
