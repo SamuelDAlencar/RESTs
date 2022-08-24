@@ -59,7 +59,7 @@ Sem Docker:
   - Caso não ocorra nenhum erro e a aplicação ainda não tenha aberto no browser, acesse essa URL e faça o login: `http://localhost:3000/login`
 
 Atualmente a aplicação não possuí opção de cadastro, utilize um destes usuários para logar:
-> <e-mail> - <senha>
+> (e-mail) - (senha)
   - Usuário 1: `fred@graodireto.com.br - 123Fred`
   - Usuário 2: `samuca@gmail.com - 1samu9`
   - Usuário 2: `gabribo@yahoo.com - gabribas5839`
