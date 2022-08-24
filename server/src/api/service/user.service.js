@@ -1,6 +1,7 @@
 const model = require('../model/user.model');
 const httpError = require('../../utils/httpError');
 const md5 = require('md5');
+const generateToken = require('../../utils/generateToken');
 
 const getByEmail = async (email) => {
   const encryptedEmail = md5(email);
@@ -25,7 +26,9 @@ const logIn = async (email, password) => {
   
   const { id, username } = user;
 
-  return { id, email, username };
+  const token = generateToken({ id, username });
+
+  return { token };
 };
 
 module.exports = {
