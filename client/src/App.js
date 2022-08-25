@@ -4,14 +4,17 @@ import './App.css';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Restaurant from './pages/Restaurant';
+import HomeProvider from './provider/HomeProvider';
 
 function App() {
   return (
-    <Routes>
-      <Route path='/login' element={ <Login /> }/>
-      <Route path='/' element={ <Home /> }/>
-      <Route path='/restaurant/:id' element={ <Restaurant /> }/>
-    </Routes>
+    <HomeProvider>
+      <Routes>
+        <Route path='/login' element={<Login />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/restaurant/:id' element={<Restaurant />} />
+      </Routes>
+    </HomeProvider>
   );
 }
 

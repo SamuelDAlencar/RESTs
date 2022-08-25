@@ -5,17 +5,21 @@ const HeaderStyle = styled.header`
   justify-content: space-between;
   padding: 15px;
   align-items: center;
-  color: #262626;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 10);
   height: 11vh;
   min-height: 60px;
   background-color: white;
   transition: ease-in-out 0.1s;
   border-bottom: 1px solid #ded4d4;
-
+  
   h1 {
+    color: #404040;
     width: 25%;
     padding-left: 1vw;
+  }
+  
+  h3 {
+    color: #404040;
   }
 
   .search_section {

@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 // import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RestaurantCard from '../../components/RestaurantCard';
-import axiosRequest from '../../helpers/axiosRequest';
+import HomeContext from '../../context/HomeContext';
 import HomeStyle from './style';
 
 export default function Home() {
-  const [results, setResults] = useState();
-  const [user] = useState(JSON.parse(localStorage.getItem('user')));
-  const [filterBy, setFilterBy] = useState('restaurant');
-
-  const getResults = async () => {
-    const response = await axiosRequest('GET', {}, {
-      authorization: user.token
-    }, filterBy);
-
-    setResults(response.data);
-  };
+  const {
+    user,
+    // input,
+    // setInput,
+    requestData,
+    results,
+    // setResults,
+    filterBy,
+    setFilterBy
+  } = useContext(HomeContext);
 
   const buttonFilter = ({ target }) => {
     if (target.id === 'restaurant') {
@@ -27,7 +26,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    getResults();
+    requestData();
   }, [filterBy]);
 
   return (
@@ -37,12 +36,20 @@ export default function Home() {
         <section className='content_section'>
           <section className='filter_section'>
             <button
+              className={filterBy === 'restaurant'
+                ? 'active_filter_button'
+                : 'inactive_filter_button'
+              }
               onClick={(event) => buttonFilter(event)}
               id='restaurant'
             >
               Restaurantes
             </button>
             <button
+              className={filterBy === 'item'
+                ? 'active_filter_button'
+                : 'inactive_filter_button'
+              }
               onClick={(event) => buttonFilter(event)}
               id='item'
             >
