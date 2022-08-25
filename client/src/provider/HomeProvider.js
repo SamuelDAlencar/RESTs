@@ -13,11 +13,11 @@ export default function HomeProvider({ children }) {
     const response = query
       ? await axiosRequest('GET', {}, {
         authorization: user.token
-      }, `${filterBy}/${query}`)
+      }, `${filterBy}/?name=${query}&description=${query}`)
 
       : await axiosRequest('GET', {}, {
         authorization: user.token
-      }, filterBy);
+      }, `${filterBy}/all`);
 
     setResults(response.data);
   };

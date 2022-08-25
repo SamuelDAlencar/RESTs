@@ -6,4 +6,12 @@ const getAll = async (req, res) => {
   return res.status(200).json(restaurants);
 };
 
-module.exports = { getAll };
+const getByName = async (req, res) => {
+  const { name } = req.query;
+
+  const restaurants = await service.getByName(name);
+
+  return res.status(200).json(restaurants);
+};
+
+module.exports = { getAll, getByName };

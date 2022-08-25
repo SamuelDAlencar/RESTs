@@ -1,10 +1,11 @@
-const { restaurant, item } = require('../../database/models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+const { restaurant } = require('../../database/models');
 
-const getAll = () => restaurant.findAll({
-  include: {
-    model: item,
-    as: 'items'
-  }
+const getAll = () => restaurant.findAll();
+
+const getByName = (name) => restaurant.findAll({
+  where: { name: { [Op.like]: `%${name}%` } }
 });
 
-module.exports = { getAll };
+module.exports = { getAll, getByName };
