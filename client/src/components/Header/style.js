@@ -6,10 +6,12 @@ const HeaderStyle = styled.header`
   padding: 15px;
   align-items: center;
   color: #262626;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 10);
   height: 11vh;
+  min-height: 60px;
   background-color: white;
   transition: ease-in-out 0.1s;
+  border-bottom: 1px solid #ded4d4;
 
   h1 {
     width: 25%;
@@ -84,7 +86,7 @@ const HeaderStyle = styled.header`
     padding: 5px 10px;
     align-items: center;
     background-color: inherit;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.4s;
     margin: 0 10px;
     display: flex;
   }
