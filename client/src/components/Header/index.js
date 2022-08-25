@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import HeaderStyle from './style';
 import { IoPersonCircleSharp, IoHome } from 'react-icons/io5';
 import { BsSearch } from 'react-icons/bs';
@@ -11,6 +12,8 @@ export default function Header({ username }) {
     setInput,
     requestData
   } = useContext(HomeContext);
+
+  const navigate = useNavigate();
 
   return (
     <HeaderStyle>
@@ -30,13 +33,19 @@ export default function Header({ username }) {
         </button>
       </section>
       <section className='nav_section'>
-        <button className='nav_button'>
+        <button
+          className='nav_button'
+          onClick={ () => navigate('/login') }
+        >
           <h3>
             {username && `Oi ${username} :D`}
           </h3>
           <IoPersonCircleSharp className='nav_icon' />
         </button>
-        <button className='nav_button'>
+        <button
+          className='nav_button'
+          onClick={ () => navigate('/') }
+        >
           <IoHome className='nav_icon' />
         </button>
       </section>
