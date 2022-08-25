@@ -22,26 +22,40 @@ const HomeStyle = styled.main`
     transition: ease-in-out 0.1s;
   }
   
-  .filter_section button {
+  .inactive_filter_button {
     border: 0;
     border-bottom: 1px solid #826464;
     background-color: inherit;
-    color: #262626;
+    color: #404040;
     padding: 15px;
     font-size: 150%;
     margin: 0 15px;
     border-radius: 5px 5px 0 0;
   }
   
-  .filter_section button:hover {
+  .inactive_filter_button:hover {
     border-bottom: 3px solid #826464;
     cursor: pointer;
-    background-color: #e6e6e6;
     transition: ease-in-out 0.1s;
   }
 
+  .active_filter_button {
+    border: 0;
+    background-color: inherit;
+    color: #333333;
+    padding: 15px;
+    font-size: 150%;
+    margin: 0 15px;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 3px solid #42855B;
+  }
 
-  .restaurants_section {
+  .active_filter_button:hover {
+    cursor: pointer;
+    transition: ease-in-out 0.1s;
+  }
+
+  .items_section {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;

@@ -14,20 +14,26 @@ const RestCardStyle = styled.section`
     justify-content: space-around;
     padding: 10px;
   }
-
+  
   h1 {
     font-size: 140%;
-    color: #404040;
     margin: 0 0 5px;
+    color: #333333;
+  }
+  
+  h4 {
+    margin-left: 5px;
+    color: #404040;
   }
 
   img {
     width: 100%;
+    border-bottom: 1px solid #e9e2e2;
     border-radius: 10px 10px 0 0;
   }
 
   @media only screen and (max-width: 1200px) {
-    min-width: 40%;
+    min-width: 30%;
   }
 
   @media only screen and (max-width: 768px) {
@@ -37,6 +43,8 @@ const RestCardStyle = styled.section`
     img {
       width: 55%;
       border-radius: 10px 0 0 10px;
+      border-bottom: 0;
+      border-right: 1px solid #e9e2e2;
     }
   }
 
