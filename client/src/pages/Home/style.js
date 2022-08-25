@@ -41,7 +41,7 @@ const HomeStyle = styled.main`
   }
 
 
-  .restaurants_section {
+  .items_section {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;

@@ -6,26 +6,29 @@ import axiosRequest from '../../helpers/axiosRequest';
 import HomeStyle from './style';
 
 export default function Home() {
-  const [restaurants, setRestaurants] = useState();
-  const [items] = useState([]);
+  const [results, setResults] = useState();
   const [user] = useState(JSON.parse(localStorage.getItem('user')));
+  const [filterBy, setFilterBy] = useState('restaurant');
 
-  const getRestaurants = async () => {
-    console.log(user.token);
+  const getResults = async () => {
     const response = await axiosRequest('GET', {}, {
       authorization: user.token
-    }, 'restaurant');
+    }, filterBy);
 
-    setRestaurants(response.data);
+    setResults(response.data);
+  };
 
-    response.data?.map((restaurant) => {
-      items.push(...restaurant.items);
-    });
+  const buttonFilter = ({ target }) => {
+    if (target.id === 'restaurant') {
+      setFilterBy('restaurant');
+    } else {
+      setFilterBy('item');
+    }
   };
 
   useEffect(() => {
-    getRestaurants();
-  }, []);
+    getResults();
+  }, [filterBy]);
 
   return (
     <>
@@ -33,12 +36,24 @@ export default function Home() {
       <HomeStyle>
         <section className='content_section'>
           <section className='filter_section'>
-            <button>Restaurantes</button>
-            <button>Itens</button>
+            <button
+              onClick={(event) => buttonFilter(event)}
+              id='restaurant'
+            >
+              Restaurantes
+            </button>
+            <button
+              onClick={(event) => buttonFilter(event)}
+              id='item'
+            >
+              Itens
+            </button>
           </section>
-          <section className='restaurants_section'>
-            {restaurants?.map(({ name, address, phone }, i) => {
-              return <RestaurantCard key={i} name={name} address={address} phone={phone} />;
+          <section className='items_section'>
+            {results?.map(({ name, address, phone }, i) => {
+              return filterBy === 'restaurant'
+                ? <RestaurantCard key={i} name={name} address={address} phone={phone} />
+                : <RestaurantCard key={i} name={name} address={address} phone={phone} />;
             })}
           </section>
         </section>
