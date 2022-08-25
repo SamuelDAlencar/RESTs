@@ -14,6 +14,9 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: url(${backgroundImage}) center center fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 
   ::-webkit-input-placeholder {

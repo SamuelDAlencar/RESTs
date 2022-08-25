@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+// import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import RestaurantCard from '../../components/RestaurantCard';
 import axiosRequest from '../../helpers/axiosRequest';
@@ -31,8 +32,10 @@ export default function Home() {
       <Header username={user.username} />
       <HomeStyle>
         <section className='content_section'>
-          <button>Restaurantes</button>
-          <button>Itens</button>
+          <section className='filter_section'>
+            <button>Restaurantes</button>
+            <button>Itens</button>
+          </section>
           <section className='restaurants_section'>
             {restaurants?.map(({ name, address, phone }, i) => {
               return <RestaurantCard key={i} name={name} address={address} phone={phone} />;
@@ -40,6 +43,7 @@ export default function Home() {
           </section>
         </section>
       </HomeStyle>
+      {/* <Footer /> */}
     </>
   );
 }
