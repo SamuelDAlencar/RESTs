@@ -27,8 +27,8 @@ const HomeStyle = styled.main`
     border-bottom: 1px solid #826464;
     background-color: inherit;
     color: #404040;
-    padding: 15px;
-    font-size: 150%;
+    padding: 15px 15px 10px;
+    font-size: 140%;
     margin: 0 15px;
     border-radius: 5px 5px 0 0;
   }

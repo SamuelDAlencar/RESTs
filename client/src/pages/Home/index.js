@@ -1,20 +1,24 @@
 import React, { useEffect, useContext } from 'react';
 // import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import RestaurantCard from '../../components/RestaurantCard';
+import Card from '../../components/Card';
 import HomeContext from '../../context/HomeContext';
 import HomeStyle from './style';
+import Loading from '../../components/Loading';
 
 export default function Home() {
   const {
     user,
     requestData,
     results,
+    setResults,
     filterBy,
     setFilterBy
   } = useContext(HomeContext);
 
   const buttonFilter = ({ target }) => {
+    setResults();
+
     if (target.id === 'restaurant') {
       setFilterBy('restaurant');
     } else {
@@ -54,11 +58,14 @@ export default function Home() {
             </button>
           </section>
           <section className='items_section'>
-            {results?.map(({ name, address, phone }, i) => {
-              return filterBy === 'restaurant'
-                ? <RestaurantCard key={i} name={name} address={address} phone={phone} />
-                : <RestaurantCard key={i} name={name} address={address} phone={phone} />;
-            })}
+            {results
+              ? results?.map(({ name, address, phone, description, price }, i) => {
+                return filterBy === 'restaurant'
+                  ? <Card key={i} name={name} address={address} phone={phone} />
+                  : <Card key={i} name={name} description={description} price={price} />;
+              })
+              : <Loading />
+            }
           </section>
         </section>
       </HomeStyle>
