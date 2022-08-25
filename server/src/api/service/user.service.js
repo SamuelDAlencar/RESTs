@@ -28,7 +28,7 @@ const logIn = async (email, password) => {
 
   const token = generateToken({ id, username });
 
-  return { token };
+  return { token, username };
 };
 
 module.exports = {
