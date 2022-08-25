@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const CardStyle = styled.section`
-  margin: 15px 5px;
+  margin: 15px 8px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   display: flex;
@@ -12,7 +12,7 @@ const CardStyle = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 10px;
+    padding: 20px;
   }
   
   h1 {
@@ -43,7 +43,7 @@ const CardStyle = styled.section`
   @media only screen and (max-width: 500px) {
     min-width: 100%;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    border-top: 1px solid #4d4d4d;
+    border-bottom: 1px solid #4d4d4d;
     border-radius: 0;
     margin: 0;
   

@@ -59,6 +59,7 @@ const HomeStyle = styled.main`
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
+    padding: 30px 15px;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -78,6 +79,10 @@ const HomeStyle = styled.main`
 
     .content_section {
       width: 90%;
+    }
+
+    .items_section {
+      padding: 0;
     }
   }
 
