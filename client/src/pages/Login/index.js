@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import axiosRequest from '../../helpers/axiosRequest';
 import LoginStyle from './style';
+import cacheUser from '../../helpers/cacheUser';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -40,7 +41,11 @@ export default function Login() {
   const login = async () => {
     const user = await axiosRequest('POST', { email, password }, {}, 'user/login');
 
-    user.status === 200 && navigate('/');
+    if (user.status === 200) {
+      cacheUser(user.data);
+
+      navigate('/');
+    }
 
     if (user.status === 403) {
       setWrongPassword(true);

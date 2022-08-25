@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import backgroundImage from './images/home-background.jpg';
 
 const GlobalStyle = createGlobalStyle`
   @import url('http://fonts.cdnfonts.com/css/gotham');
@@ -9,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Gotham Black', sans-serif;
     font-weight: 500;
+  }
+
+  body {
+    background: url(${backgroundImage}) center center fixed;
   }
 
   ::-webkit-input-placeholder {
