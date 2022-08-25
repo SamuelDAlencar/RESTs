@@ -7,7 +7,8 @@ Projeto fullstack que consiste em um MVP de uma aplicação do ramo gastronômic
 *Front-end:*
   - [x] Página de login responsiva e campos de email e senha
   - [x] Rotas de usuário e de restaurantes criadas
-  - [ ] Página "home" responsiva listando todos os restaurantes disponíveis no banco
+  - [x] Página "home" responsiva listando todos os restaurantes disponíveis no banco
+  - [ ] Estilização dos restaurantes da home
   - [ ] Opção de filtro dos restaurantes atráves do campo de busca (que busque pelo nome do restaurante, nome ou descrição de um prato)
   - [ ] Tela de informações de um restaurante acessível através de um click no card do mesmo
   - [ ] Tela de informações de um restaurante mostrando o nome, endereço e telefone do mesmo, além da lista de itens do menu (com nome, decrição e preço)
@@ -18,8 +19,8 @@ Projeto fullstack que consiste em um MVP de uma aplicação do ramo gastronômic
   - [x] Criação da estrutura e relacionamentos do banco de dados
   - [x] Criação das rotas de usuário e restaurantes 
   - [x] Popular o banco com usuários pré cadastrados (e-mail e senha criptografados), restaurantes e seus respectivos itens
-  - [ ] No login, validar previamente se o e-mail se encontra no banco
-  - [ ] Na home, validar se o usuário possui acesso a pagina atráves de um token gerado no login
+  - [x] No login, validar previamente se o e-mail se encontra no banco
+  - [x] Na home, validar se o usuário possui acesso a pagina atráves de um token gerado no login
 
 > Obs: Projeto em desenvolvimento!
 
