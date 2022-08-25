@@ -43,7 +43,8 @@ const HeaderStyle = styled.header`
   }
   
   input:focus {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    margin: 0 5px 5px 0;
   }
 
   input:focus::placeholder {
