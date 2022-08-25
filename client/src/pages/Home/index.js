@@ -8,11 +8,8 @@ import HomeStyle from './style';
 export default function Home() {
   const {
     user,
-    // input,
-    // setInput,
     requestData,
     results,
-    // setResults,
     filterBy,
     setFilterBy
   } = useContext(HomeContext);
