@@ -22,6 +22,16 @@ const StyledHome = styled.main`
     transition: ease-in-out 0.1s;
   }
 
+  .items_section button {
+    transition: ease-in-out 0.3s;
+  }
+  
+  .items_section button:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+    margin: 15px 10px;
+  }
+
   .inactive_filter_button {
     border: 0;
     border-bottom: 1px solid #826464;

@@ -35,10 +35,30 @@ export default function Home() {
           </section>
           <section className='items_section'>
             {results
-              ? results?.map(({ name, address, phone, description, price }, i) => {
+              ? results?.map(({
+                id,
+                restaurantId,
+                name,
+                address,
+                phone,
+                description,
+                price
+              }, i) => {
                 return filterBy === 'restaurant'
-                  ? <Card key={i} name={name} address={address} phone={phone} />
-                  : <Card key={i} name={name} description={description} price={price} />;
+                  ? <Card
+                    key={i}
+                    id={id}
+                    name={name}
+                    address={address}
+                    phone={phone}
+                  />
+                  : <Card
+                    key={i}
+                    id={restaurantId}
+                    name={name}
+                    description={description}
+                    price={price}
+                  />;
               })
               : <Loading />
             }

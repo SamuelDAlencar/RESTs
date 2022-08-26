@@ -19,7 +19,6 @@ const getByQuery = (name, description) => item.findAll({
       }
     ]
   }
-
 });
 
 module.exports = { getAll, getByQuery };
