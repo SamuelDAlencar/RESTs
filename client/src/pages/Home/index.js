@@ -10,10 +10,10 @@ import FilterButton from '../../components/FilterButton';
 export default function Home() {
   const {
     user,
-    input,
     requestData,
     results,
     filterBy,
+    searchedBy
   } = useContext(HomeContext);
 
   useEffect(() => {
@@ -26,12 +26,18 @@ export default function Home() {
       <StyledHome>
         <section className='content_section'>
           <section className='filter_section'>
-            <FilterButton
-              id='restaurant'
-            />
-            <FilterButton
-              id='item'
-            />
+            <section>
+              <FilterButton
+                id='restaurant'
+              />
+              <FilterButton
+                id='item'
+              />
+            </section>
+            {searchedBy && (
+              <p className='searchingFor_p'>
+                Buscando {filterBy === 'restaurant' ? 'restaurantes' : 'itens'} por <span>&quot;{searchedBy}&quot;</span>
+              </p>)}
           </section>
           <section className='items_section'>
             {results
@@ -65,7 +71,7 @@ export default function Home() {
 
             {results?.length === 0 && (
               <p className='notFound_p'>
-                Nenhum {filterBy === 'restaurant' ? 'restaurante' : 'item'} com o termo <span>&quot;{input}&quot;</span> foi encontrado :&apos;&#40;
+                Nenhum {filterBy === 'restaurant' ? 'restaurante' : 'item'} com o termo <span>&quot;{searchedBy}&quot;</span> foi encontrado :&apos;&#40;
               </p>)}
           </section>
         </section>

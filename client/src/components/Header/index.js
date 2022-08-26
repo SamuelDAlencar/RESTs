@@ -32,7 +32,7 @@ export default function Header({ username }) {
         />
         <button
           className='search_button'
-          onClick={() => requestData(input)}
+          onClick={() => requestData(input, true)}
         >
           <BsSearch className='search_icon' />
         </button>
