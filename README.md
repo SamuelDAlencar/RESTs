@@ -23,7 +23,7 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [x] No login, validar previamente se o e-mail se encontra no banco
   - [x] Na home, validar se o usuário possui acesso a pagina atráves de um token gerado no login
 
-> Obs: Projeto em desenvolvimento!
+> Obs: Projeto ainda recebendo alguns ajustes!
 
 ## 👩‍💻 Acesse o projeto
 
