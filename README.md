@@ -11,7 +11,7 @@ A Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [x] Estilização dos restaurantes da home
   - [x] Opção de filtro dos restaurantes atráves do campo de busca (que busque pelo nome do restaurante, nome ou descrição de um prato)
   - [x] Tela de informações de um restaurante acessível através de um click no card do mesmo
-  - [ ] Tela de informações de um restaurante mostrando o nome, endereço e telefone do mesmo, além da lista de itens do menu (com nome, decrição e preço)
+  - [x] Tela de informações de um restaurante mostrando o nome, endereço e telefone do mesmo, além da lista de itens do menu (com nome, decrição e preço)
   - [x] Opção na barra de navegação que possibilita o usuário retornar a "home"
   - [x] Opção na barra de navegação que possibilita o usuário deslogar da aplicação
 
