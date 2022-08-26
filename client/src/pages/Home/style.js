@@ -5,7 +5,7 @@ const StyledHome = styled.main`
   border-radius: 0 0 15px 15px;
 
   .content_section {
-    background-color: #f5f5f5;
+    background-color: white;
     width: 80%;
     margin: 0 auto;
     transition: ease-in-out 0.1s;
@@ -102,6 +102,15 @@ const StyledHome = styled.main`
   @media only screen and (max-width: 768px) {
     .filter_section {
       justify-content: space-around;
+      flex-direction: column-reverse;
+    }
+
+    .notFound_p {
+      margin: 50px;
+    }
+
+    .searchingFor_p {
+      margin-top: 30px;
     }
 
     .filter_section button {
@@ -114,6 +123,12 @@ const StyledHome = styled.main`
 
     .items_section {
       padding: 0;
+    }
+
+    .items_section button:hover {
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      margin: 5px 10px;
     }
   }
 

@@ -7,5 +7,6 @@ const validateAccess = require('../../middlewares/validateAccess');
 
 router.get('/all', validateAccess, controller.getAll);
 router.get('/', validateAccess, controller.getByName);
+router.get('/:id', validateAccess, controller.getById);
 
 module.exports = router;
