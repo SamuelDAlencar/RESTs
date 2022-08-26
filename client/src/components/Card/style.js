@@ -24,12 +24,14 @@ const StyledCard = styled.button`
   .card_name {
     font-size: 140%;
     margin: 5px 0;
-    color: #333333;
+    color: #262626;
+    font-weight: 700;
   }
   
   .card_description, .card_address {
     margin: 5px 0;
     color: #404040;
+    font-size: 120%;
   }
 
   .card_phone {

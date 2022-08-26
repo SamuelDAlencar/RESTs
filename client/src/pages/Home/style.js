@@ -62,6 +62,7 @@ const StyledHome = styled.main`
     margin: 0 15px;
     border-radius: 5px 5px 0 0;
     border-bottom: 3px solid #42855B;
+    font-weight: 700;
   }
 
   .active_filter_button:hover {

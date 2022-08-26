@@ -2,14 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import backgroundImage from './images/home-background.jpg';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('http://fonts.cdnfonts.com/css/gotham');
-  
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gotham Black', sans-serif;
     font-weight: 500;
+    font-family: 'Gotham Light', sans-serif;
   }
 
   body {
