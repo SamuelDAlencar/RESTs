@@ -18,7 +18,7 @@ A Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 *Back-end:*
   - [x] Criação da estrutura e relacionamentos do banco de dados
   - [x] Criação das rotas de usuário e restaurantes 
-  - [ ] Criação da rota de itens (incluindo a rota que traz os itens de acordo com o "id" de um restaurante)
+  - [x] Criação da rota de itens (incluindo a rota que traz os itens de acordo com o "id" de um restaurante)
   - [x] Popular o banco com usuários pré cadastrados (e-mail e senha criptografados), restaurantes e seus respectivos itens
   - [x] No login, validar previamente se o e-mail se encontra no banco
   - [x] Na home, validar se o usuário possui acesso a pagina atráves de um token gerado no login
