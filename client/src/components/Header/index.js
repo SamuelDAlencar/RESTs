@@ -19,7 +19,8 @@ export default function Header({ username }) {
   return (
     <StyledHeader>
       <a className='logo_title'>
-        <img className='logo_jpg' src={logo}/>
+        {/* Creditos da Logo: https://www.flaticon.com/free-icon/placeholder_1147907 */}
+        <img className='logo_jpg' src={logo} />
         Spot
       </a>
 
@@ -31,7 +32,7 @@ export default function Header({ username }) {
         />
         <button
           className='search_button'
-          onClick={ () => requestData(input) }
+          onClick={() => requestData(input)}
         >
           <BsSearch className='search_icon' />
         </button>
@@ -39,7 +40,7 @@ export default function Header({ username }) {
       <section className='nav_section'>
         <button
           className='nav_button'
-          onClick={ () => navigate('/login') }
+          onClick={() => navigate('/login')}
         >
           <h3>
             {username && `Oi ${username} :D`}
@@ -48,7 +49,7 @@ export default function Header({ username }) {
         </button>
         <button
           className='nav_button'
-          onClick={ () => navigate('/') }
+          onClick={() => navigate('/')}
         >
           <IoHome className='nav_icon' />
         </button>

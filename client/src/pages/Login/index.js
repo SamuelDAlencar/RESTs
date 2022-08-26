@@ -74,7 +74,11 @@ export default function Login() {
             onClick={() => setEmailConfirmed(false)}
           />
         )}
-        <h1><img className='logo_jpg' src={logo}/>Spot</h1>
+        <h1>
+          {/* Creditos da Logo: https://www.flaticon.com/free-icon/placeholder_1147907 */}
+          <img className='logo_jpg' src={logo} />
+          Spot
+        </h1>
 
         {!emailConfirmed ? (
           <>
