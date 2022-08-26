@@ -6,7 +6,8 @@ export default function FilterButton({ id }) {
   const {
     setResults,
     filterBy,
-    setFilterBy
+    setFilterBy,
+    setSearchedBy
   } = useContext(HomeContext);
 
   const buttonFilter = ({ target }) => {
@@ -17,6 +18,8 @@ export default function FilterButton({ id }) {
     } else {
       setFilterBy('item');
     }
+
+    setSearchedBy('');
   };
 
   return (

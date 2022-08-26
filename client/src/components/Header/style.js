@@ -31,10 +31,6 @@ const StyledHeader = styled.header`
     cursor: pointer;
   }
   
-  h3 {
-    color: #404040;
-  }
-
   .search_section {
     width: 45%;
     display: flex;
@@ -43,7 +39,7 @@ const StyledHeader = styled.header`
   }
 
   input {
-    color: #262626;
+    color: #404040;
     font-size: 120%;
     padding: 10px;
     height: 50px;
@@ -80,7 +76,7 @@ const StyledHeader = styled.header`
 
   .search_icon {
     font-size: 34px;
-    color: #90B77D;
+    color: #42855B;
     margin-left: 15px;
     transition: ease-in-out 0.2s;
   }
@@ -93,11 +89,12 @@ const StyledHeader = styled.header`
     transition: ease-in-out 0.1s;
   }
 
-  .nav_section h3 {
+  h3 {
     font-size: 140%;
     margin: 0 15px 0;
+    color: #404040;
   }
-
+  
   .nav_button {
     border: 0;
     border-radius: 10px;
@@ -116,7 +113,7 @@ const StyledHeader = styled.header`
 
 
   .nav_icon {
-    color: #90B77D;
+    color: #42855B;
     font-size: 45px;
     border-radius: 50%;
     transition: ease-in-out 0.2s;

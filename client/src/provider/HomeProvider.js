@@ -6,10 +6,11 @@ import axiosRequest from '../helpers/axiosRequest';
 export default function HomeProvider({ children }) {
   const [user] = useState(JSON.parse(localStorage.getItem('user')));
   const [input, setInput] = useState('');
+  const [searchedBy, setSearchedBy] = useState('');
   const [results, setResults] = useState();
   const [filterBy, setFilterBy] = useState('restaurant');
 
-  const requestData = async (query) => {
+  const requestData = async (query, search) => {
     const response = query
       ? await axiosRequest('GET', {}, {
         authorization: user.token
@@ -20,6 +21,9 @@ export default function HomeProvider({ children }) {
       }, `${filterBy}/all`);
 
     setResults(response.data);
+
+    setSearchedBy(input);
+    search && setInput('');
   };
 
   return (
@@ -31,6 +35,8 @@ export default function HomeProvider({ children }) {
         setResults,
         input,
         setInput,
+        searchedBy,
+        setSearchedBy,
         filterBy,
         setFilterBy,
       }}

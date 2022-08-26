@@ -14,11 +14,15 @@ const StyledHome = styled.main`
   }
 
   .filter_section {
-    width: 100%;
     display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid #e9e2e2;
-    padding: 30px 15px 0;
     margin-bottom: 15px;
+  }
+
+  .filter_section section {
+    padding: 30px 15px 0;
+    display: flex;
     transition: ease-in-out 0.1s;
   }
 
@@ -77,8 +81,15 @@ const StyledHome = styled.main`
     color: #333333;
     margin: 50px 0;
   }
-
-  .notFound_p span {
+  
+  .searchingFor_p {
+    font-size: 130%;
+    color: #333333;
+    margin: 0 50px;
+    align-self: center;
+  }
+  
+  .notFound_p span, .searchingFor_p span {
     color: #42855B;
   }
 
