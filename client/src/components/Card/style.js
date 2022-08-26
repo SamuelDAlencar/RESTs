@@ -17,6 +17,8 @@ const StyledCard = styled.button`
     background-color: white;
     border-radius: 0 0 10px 10px;
     height: 100%;
+    align-items: flex-start; 
+    text-align: left;
   }
   
   .card_name {

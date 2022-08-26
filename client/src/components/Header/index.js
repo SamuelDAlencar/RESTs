@@ -18,7 +18,10 @@ export default function Header({ username }) {
 
   return (
     <StyledHeader>
-      <a className='logo_title'>
+      <a
+        onClick={() => navigate('/')}
+        className='logo_title'
+      >
         {/* Creditos da Logo: https://www.flaticon.com/free-icon/placeholder_1147907 */}
         <img className='logo_jpg' src={logo} />
         Spot
