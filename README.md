@@ -77,6 +77,7 @@ Após logado e autenticado, basta conferir os restaurantes disponíveis e vascul
 - [Javascript](https://www.javascript.com/) - Linguagem de programação utilizada
 - [React](https://reactjs.org/) - Biblioteca front-end para componentização
 - [React Router](https://reactrouter.com/en/main) - Biblioteca React para gerenciamento de rotas
+- [ContextAPI](https://reactjs.org/docs/context.html) - Recurso React para gerenciamento de estado
 - [React Icons](https://react-icons.github.io/react-icons/) - Biblioteca React de ícones
 - [Styled Components](https://styled-components.com/) - Biblioteca React para estilização de componentes
 - [Node.js](https://nodejs.org/en/) - Campo de execução JS para back-end
