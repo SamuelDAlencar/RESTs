@@ -40,7 +40,7 @@ Sem Docker:
 
   - Versão *igual* ou *superior* a `16` do `node`
   - Instância do [`MySQL`](https://www.mysql.com/) rodando na porta `3306`
-    > ⚠ Atualize as variáveis de ambiente com a senha do seu banco (arquivo .env na pasta /server) ⚠
+    > ⚠ Atualize as variáveis de ambiente com a senha do seu banco (arquivo .env na pasta /server), e também as variáveis do arquivo config do sequelize (arquivo config na pasta /server/database/config) ⚠
   - Portas `3000` e `3001` da sua máquina liberadas
 
 ## 🚀 Instalando localmente
