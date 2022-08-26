@@ -25,7 +25,9 @@ export default function ItemCard({ id, name, address, phone, description, price,
           <img src={type === 'food' ? foodIcon : drinkIcon} />
           <section>
             <p className='card_name'>{name}</p>
-            <p className='card_description'>{description}</p>
+            <p className='card_description'>
+              {description}
+            </p>
             <FormattedCurrency price={price} />
           </section>
         </StyledCard>)

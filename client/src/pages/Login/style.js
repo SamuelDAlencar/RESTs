@@ -90,6 +90,7 @@ const StyledLogin = styled.main`
     color: white;
     background-color: #42855B;
     transition: ease-in-out 0.1s;
+    font-weight: 700;
   }
 
   button:disabled {

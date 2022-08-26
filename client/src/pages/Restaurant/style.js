@@ -23,6 +23,7 @@ const StyledRestaurant = styled.section`
     font-size: 350%;
     color: #404040;
     margin-bottom: 20px;
+    font-weight: 700;
   }
 
   .restInfo_section section h2 {

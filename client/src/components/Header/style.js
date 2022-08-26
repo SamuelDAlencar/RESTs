@@ -130,6 +130,7 @@ const StyledHeader = styled.header`
     color: #404040;
     font-size: 150%;
     margin-right: 15px;
+    font-weight: 700;
   }
 
   @media only screen and (max-width: 1200px) {
