@@ -12,8 +12,11 @@ const StyledCard = styled.button`
   section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     padding: 20px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+    height: 100%;
   }
   
   .card_name {
@@ -38,6 +41,7 @@ const StyledCard = styled.button`
   }
 
   img {
+    padding: 15px;
     width: 100%;
     border-bottom: 1px solid #e9e2e2;
     border-radius: 10px 10px 0 0;
@@ -57,19 +61,22 @@ const StyledCard = styled.button`
     border-bottom: 1px solid #4d4d4d;
     border-radius: 0;
     margin: 0;
-  
+
     img {
-      width: 100%;
       border-radius: 10px 0 0 10px;
       border-bottom: 1px solid #e9e2e2;
     }
 
-    h1 {
-      font-size: 145%;
+    section {
+      align-items: flex-start;
+    }
+
+    .card_name{
+      font-size: 190%;
     }
   
-    h4 {
-      font-size: 125%;
+    .card_address, .card_phone, .card_description {
+      font-size: 135%;
     }
   }
 `;

@@ -8,4 +8,8 @@ const getByName = (name) => restaurant.findAll({
   where: { name: { [Op.like]: `%${name}%` } }
 });
 
-module.exports = { getAll, getByName };
+const getById = (id) => restaurant.findOne({
+  where: { id }
+});
+
+module.exports = { getAll, getByName, getById };

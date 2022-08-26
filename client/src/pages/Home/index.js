@@ -48,7 +48,8 @@ export default function Home() {
                 address,
                 phone,
                 description,
-                price
+                price,
+                type
               }, i) => {
                 return filterBy === 'restaurant'
                   ? <Card
@@ -64,6 +65,7 @@ export default function Home() {
                     name={name}
                     description={description}
                     price={price}
+                    type={type}
                   />;
               })
               : <Loading />

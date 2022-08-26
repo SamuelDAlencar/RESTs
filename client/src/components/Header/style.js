@@ -5,12 +5,12 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   padding: 15px;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 10);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 10);
   height: 11vh;
   min-height: 60px;
   background-color: white;
   transition: ease-in-out 0.1s;
-  border-bottom: 1px solid #ded4d4;
+  border-bottom: 2px solid #ded4d4;
   
   .logo_jpg {
     width: 60px;

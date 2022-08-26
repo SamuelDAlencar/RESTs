@@ -21,4 +21,8 @@ const getByQuery = (name, description) => item.findAll({
   }
 });
 
-module.exports = { getAll, getByQuery };
+const getByRestaurant = (id) => item.findAll({
+  where: { restaurantId: id }
+});
+
+module.exports = { getAll, getByQuery, getByRestaurant };

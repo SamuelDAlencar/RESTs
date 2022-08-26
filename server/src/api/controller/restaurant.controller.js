@@ -14,4 +14,12 @@ const getByName = async (req, res) => {
   return res.status(200).json(restaurants);
 };
 
-module.exports = { getAll, getByName };
+const getById = async (req, res) => {
+  const { id } = req.params;
+
+  const restaurant = await service.getById(id);
+
+  return res.status(200).json(restaurant);
+};
+
+module.exports = { getAll, getByName, getById };
