@@ -6,12 +6,14 @@ import Card from '../../components/Card';
 // Creditos da imagem: https://flyclipart.com/gps-location-map-pin-pin-restaurant-icon-restaurant-icon-png-237324
 import restaurantIcon from '../../images/restaurant.jpg';
 import StyledRestaurant from './style';
+import { IoLocationSharp } from 'react-icons/io5';
+import { BsFillTelephoneFill } from 'react-icons/bs';
 
 export default function Restaurant() {
   const { id } = useParams();
   const [user] = useState(JSON.parse(localStorage.getItem('user')));
-  const [foods] = useState([]);
-  const [drinks] = useState([]);
+  const [foods, setFoods] = useState([]);
+  const [drinks, setDrinks] = useState([]);
   const [restaurant, setRestaurant] = useState();
 
   const requestItems = async () => {
@@ -20,9 +22,11 @@ export default function Restaurant() {
     }, `item/${id}`);
 
     response.data.map((item) => {
-      item.type === 'food'
-        ? foods.push(item)
-        : drinks.push(item);
+      if (item.type === 'food') {
+        setFoods(prevState => [...prevState, item]);
+      } else {
+        setDrinks(prevState => [...prevState, item]);
+      }
     });
   };
 
@@ -41,33 +45,57 @@ export default function Restaurant() {
 
   return (
     <>
-      <Header />
+      <Header username={ user.username } />
       <StyledRestaurant>
-        <img src={restaurantIcon} />
-        <h1>{restaurant?.name}</h1>
-        <h1>{restaurant?.address}</h1>
-        <h1>{restaurant?.phone}</h1>
+        <section className='restInfo_section'>
+          <img src={restaurantIcon} />
+          <section>
+            <h1>{restaurant?.name}</h1>
+            <h2>
+              <IoLocationSharp
+                className='icon'
+              />
+              Endereço: {restaurant?.address}</h2>
+            <h2>
+              <BsFillTelephoneFill
+                className='icon'
+              />
+              Número: <span>{restaurant?.phone}</span></h2>
+          </section>
+        </section>
+        <section className='foods_section'>
+          <h1>Cardápio</h1>
+          <section className='food_list'>
+            {foods?.map(({ id, name, description, price, type }) => {
+              return (
+                <Card
+                  key={id}
+                  name={name}
+                  description={description}
+                  price={price}
+                  type={type}
+                />
+              );
+            })}
+          </section>
+        </section>
 
-        {foods?.map(({ id, name, description, price }) => {
-          return (
-            <Card
-              key={id}
-              name={name}
-              description={description}
-              price={price}
-            />
-          );
-        })}
-        {drinks?.map(({ id, name, description, price }) => {
-          return (
-            <Card
-              key={id}
-              name={name}
-              description={description}
-              price={price}
-            />
-          );
-        })}
+        <section className='drinks_section'>
+          <h1>Bebidas</h1>
+          <section className='drink_list'>
+            {drinks?.map(({ id, name, description, price, type }) => {
+              return (
+                <Card
+                  key={id}
+                  name={name}
+                  description={description}
+                  price={price}
+                  type={type}
+                />
+              );
+            })}
+          </section>
+        </section>
       </StyledRestaurant>
     </>
   );

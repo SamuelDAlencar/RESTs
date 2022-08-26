@@ -34,6 +34,24 @@ const GlobalStyle = createGlobalStyle`
   :-ms-input-placeholder {  
     font-style: italic; 
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #906f6f;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #483838;
+    height: 10px;
+  }
 `;
 
 export default GlobalStyle;
