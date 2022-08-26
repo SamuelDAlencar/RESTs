@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const CardStyle = styled.section`
+const StyledCard = styled.section`
   margin: 15px 8px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -15,15 +15,25 @@ const CardStyle = styled.section`
     padding: 20px;
   }
   
-  h1 {
+  .card_name {
     font-size: 140%;
     margin: 5px 0;
     color: #333333;
   }
   
-  h4 {
+  .card_description, .card_address {
     margin: 5px 0;
     color: #404040;
+  }
+
+  .card_phone {
+    margin: 5px 0;
+    color: #404040;
+    text-decoration: underline;
+  }
+
+  .card_icon {
+    margin-right: 5px;
   }
 
   img {
@@ -63,4 +73,4 @@ const CardStyle = styled.section`
   }
 `;
 
-export default CardStyle;
+export default StyledCard;

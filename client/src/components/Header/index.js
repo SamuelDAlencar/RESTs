@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import HeaderStyle from './style';
+import StyledHeader from './style';
 import { IoPersonCircleSharp, IoHome } from 'react-icons/io5';
 import { BsSearch } from 'react-icons/bs';
 import HomeContext from '../../context/HomeContext';
+import logo from '../../images/logo.jpg';
 
 export default function Header({ username }) {
   const {
@@ -16,8 +17,11 @@ export default function Header({ username }) {
   const navigate = useNavigate();
 
   return (
-    <HeaderStyle>
-      <h1>(Titulo)</h1>
+    <StyledHeader>
+      <a className='logo_title'>
+        <img className='logo_jpg' src={logo}/>
+        Spot
+      </a>
 
       <section className='search_section'>
         <input
@@ -49,7 +53,7 @@ export default function Header({ username }) {
           <IoHome className='nav_icon' />
         </button>
       </section>
-    </HeaderStyle>
+    </StyledHeader>
   );
 }
 Header.propTypes = {

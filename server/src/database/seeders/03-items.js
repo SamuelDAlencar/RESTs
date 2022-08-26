@@ -47,7 +47,7 @@ module.exports = {
         },
         {
           restaurantId: 2,
-          name: 'Porção com giló',
+          name: 'Porção com jiló',
           type: 'food',
           description: 'Opções da carne: Frango, coração, boi',
           price: 12,

@@ -1,10 +1,10 @@
 import React from 'react';
-import FooterStyle from './style';
+import StyledFooter from './style';
 
 export default function Footer() {
   return (
-    <FooterStyle>
+    <StyledFooter>
       <h4>Made by Samuel</h4>
-    </FooterStyle>
+    </StyledFooter>
   );
 }

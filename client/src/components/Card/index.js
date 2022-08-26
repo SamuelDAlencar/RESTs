@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import CardStyle from './style';
+import StyledCard from './style';
 import FormattedCurrency from '../FormattedPrice';
+import { IoLocationSharp } from 'react-icons/io5';
+import { BsFillTelephoneFill } from 'react-icons/bs';
 
 // Creditos da imagem: https://www.pngwing.com/en/free-png-zytve
 import foodIcon from '../../images/food.jpg';
@@ -12,23 +14,33 @@ export default function ItemCard({ name, address, phone, description, price }) {
   return (
     price
       ? (
-        <CardStyle>
+        <StyledCard>
           <img src={foodIcon} />
           <section>
-            <h1>{name}</h1>
-            <h4>{description}</h4>
+            <p className='card_name'>{name}</p>
+            <p className='card_description'>{description}</p>
             <FormattedCurrency price={price} />
           </section>
-        </CardStyle>)
+        </StyledCard>)
       : (
-        <CardStyle>
+        <StyledCard>
           <img src={restaurantIcon} />
           <section>
-            <h1>{name}</h1>
-            <h4>{address}</h4>
-            <h4>{phone}</h4>
+            <p className='card_name'>{name}</p>
+            <p className='card_address'>
+              <IoLocationSharp
+                className='card_icon'
+              />
+              {address}
+            </p>
+            <a className='card_phone'>
+              <BsFillTelephoneFill
+                className='card_icon'
+              />
+              {phone}
+            </a>
           </section>
-        </CardStyle>
+        </StyledCard>
       )
   );
 }
