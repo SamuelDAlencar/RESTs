@@ -45,9 +45,10 @@ export default function Header({ username }) {
           className='nav_button'
           onClick={() => navigate('/login')}
         >
-          <h3>
-            {username && `Oi ${username} :D`}
-          </h3>
+          {username
+            ? <p className='username'>{`Oi ${username} :D`}</p>
+            : <p className='login_button'>Login</p>
+          }
           <IoPersonCircleSharp className='nav_icon' />
         </button>
         <button

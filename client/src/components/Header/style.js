@@ -119,6 +119,19 @@ const StyledHeader = styled.header`
     transition: ease-in-out 0.2s;
   }
 
+  .login_button {
+    color: #42855B;
+    font-size: 150%;
+    margin-right: 10px;
+    text-decoration: underline;
+  }
+
+  .username {
+    color: #404040;
+    font-size: 150%;
+    margin-right: 15px;
+  }
+
   @media only screen and (max-width: 1200px) {
     h1 {
       width: 20%;
@@ -138,17 +151,21 @@ const StyledHeader = styled.header`
       margin-left: 5px;
     }
 
-    .nav_section h3 {
+    .login_button, .username {
       display: none;
     }
 
     .nav_icon {
       font-size: 40px;
     }
+
+    .nav_button {
+      margin: 0 5px;
+    }
   }
 
   @media only screen and (max-width: 768px) {
-    .logo_title {
+    .login_button, .username, .logo_title {
       display: none;
     }
 
