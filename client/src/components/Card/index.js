@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import StyledCard from './style';
 import FormattedCurrency from '../FormattedPrice';
 import { IoLocationSharp } from 'react-icons/io5';
@@ -10,11 +11,15 @@ import foodIcon from '../../images/food.jpg';
 // Creditos da imagem: https://flyclipart.com/gps-location-map-pin-pin-restaurant-icon-restaurant-icon-png-237324
 import restaurantIcon from '../../images/restaurant.jpg';
 
-export default function ItemCard({ name, address, phone, description, price }) {
+export default function ItemCard({ id, name, address, phone, description, price }) {
+  const navigate = useNavigate();
+
   return (
     price
       ? (
-        <StyledCard>
+        <StyledCard
+          onClick={() => navigate(`/restaurant/${id}`)}
+        >
           <img src={foodIcon} />
           <section>
             <p className='card_name'>{name}</p>
@@ -23,7 +28,9 @@ export default function ItemCard({ name, address, phone, description, price }) {
           </section>
         </StyledCard>)
       : (
-        <StyledCard>
+        <StyledCard
+          onClick={() => navigate(`/restaurant/${id}`)}
+        >
           <img src={restaurantIcon} />
           <section>
             <p className='card_name'>{name}</p>
@@ -46,6 +53,7 @@ export default function ItemCard({ name, address, phone, description, price }) {
 }
 
 ItemCard.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string,
   description: PropTypes.string,
   price: PropTypes.number,

@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
-const StyledCard = styled.section`
+const StyledCard = styled.button`
   margin: 15px 8px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   max-width: 20%;
+  border: 0;
 
   section {
     display: flex;
