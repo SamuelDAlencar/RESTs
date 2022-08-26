@@ -72,7 +72,7 @@ Atualmente a aplicação não possuí opção de cadastro, utilize um destes usu
 
 Após logado e autenticado, basta conferir os restaurantes disponíveis e vasculhar seus cardápios 😋
 
-## 🧰 Tecnologias utilizadas
+## 🧰 Tecnologias e ferramentas utilizadas
 
 - [Javascript](https://www.javascript.com/) - Linguagem de programação utilizada
 - [React](https://reactjs.org/) - Biblioteca front-end para componentização
