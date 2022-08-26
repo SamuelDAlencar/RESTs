@@ -3,28 +3,18 @@ import React, { useEffect, useContext } from 'react';
 import Header from '../../components/Header';
 import Card from '../../components/Card';
 import HomeContext from '../../context/HomeContext';
-import HomeStyle from './style';
+import StyledHome from './style';
 import Loading from '../../components/Loading';
+import FilterButton from '../../components/FilterButton';
 
 export default function Home() {
   const {
     user,
+    input,
     requestData,
     results,
-    setResults,
     filterBy,
-    setFilterBy
   } = useContext(HomeContext);
-
-  const buttonFilter = ({ target }) => {
-    setResults();
-
-    if (target.id === 'restaurant') {
-      setFilterBy('restaurant');
-    } else {
-      setFilterBy('item');
-    }
-  };
 
   useEffect(() => {
     requestData();
@@ -33,29 +23,15 @@ export default function Home() {
   return (
     <>
       <Header username={user.username} />
-      <HomeStyle>
+      <StyledHome>
         <section className='content_section'>
           <section className='filter_section'>
-            <button
-              className={filterBy === 'restaurant'
-                ? 'active_filter_button'
-                : 'inactive_filter_button'
-              }
-              onClick={(event) => buttonFilter(event)}
+            <FilterButton
               id='restaurant'
-            >
-              Restaurantes
-            </button>
-            <button
-              className={filterBy === 'item'
-                ? 'active_filter_button'
-                : 'inactive_filter_button'
-              }
-              onClick={(event) => buttonFilter(event)}
+            />
+            <FilterButton
               id='item'
-            >
-              Itens
-            </button>
+            />
           </section>
           <section className='items_section'>
             {results
@@ -66,9 +42,14 @@ export default function Home() {
               })
               : <Loading />
             }
+
+            {results?.length === 0 && (
+              <p className='notFound_p'>
+                Nenhum {filterBy === 'restaurant' ? 'restaurante' : 'item'} com o termo <span>&quot;{input}&quot;</span> foi encontrado :&apos;&#40;
+              </p>)}
           </section>
         </section>
-      </HomeStyle>
+      </StyledHome>
       {/* <Footer /> */}
     </>
   );

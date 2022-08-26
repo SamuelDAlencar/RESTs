@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import loginBackground from '../../images/login-background.jpg';
 
-const LoginStyle = styled.main`
+const StyledLogin = styled.main`
   background-image: url(${loginBackground});
   background-position: top;
   height: 100vh;
@@ -38,8 +38,13 @@ const LoginStyle = styled.main`
     width: 80px;
   }
 
+  .logo_jpg {
+    width: 150px;
+  }
+
   h1 {
-    font-size: 400%;
+    font-size: 590%;
+    font-family: 'Delius Swash Caps', cursive;
   }
 
   label {
@@ -102,4 +107,4 @@ const LoginStyle = styled.main`
   }
 `;
 
-export default LoginStyle;
+export default StyledLogin;

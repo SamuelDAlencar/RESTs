@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const FooterStyle = styled.footer`
+const StyledFooter = styled.footer`
   width: 100%;
   background-color: white;
   color: grey;
 `;
 
-export default FooterStyle;
+export default StyledFooter;

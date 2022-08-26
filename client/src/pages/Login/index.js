@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import axiosRequest from '../../helpers/axiosRequest';
-import LoginStyle from './style';
+import StyledLogin from './style';
 import cacheUser from '../../helpers/cacheUser';
+import logo from '../../images/logo.jpg';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -65,7 +66,7 @@ export default function Login() {
   };
 
   return (
-    <LoginStyle>
+    <StyledLogin>
       <section>
         {emailConfirmed && (
           <IoIosArrowRoundBack
@@ -73,7 +74,7 @@ export default function Login() {
             onClick={() => setEmailConfirmed(false)}
           />
         )}
-        <h1>( Titulo )</h1>
+        <h1><img className='logo_jpg' src={logo}/>Spot</h1>
 
         {!emailConfirmed ? (
           <>
@@ -116,6 +117,6 @@ export default function Login() {
             </button>
           </>)}
       </section>
-    </LoginStyle>
+    </StyledLogin>
   );
 }

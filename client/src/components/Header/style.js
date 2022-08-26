@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HeaderStyle = styled.header`
+const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   padding: 15px;
@@ -12,10 +12,23 @@ const HeaderStyle = styled.header`
   transition: ease-in-out 0.1s;
   border-bottom: 1px solid #ded4d4;
   
-  h1 {
+  .logo_jpg {
+    width: 60px;
+  }
+
+  .logo_title {
     color: #404040;
-    width: 25%;
+    display: flex;
+    margin-right: 15%;
     padding-left: 1vw;
+    font-family: 'Delius Swash Caps', cursive;
+    font-size: 300%;
+    transition: ease-in-out 0.1s;
+    color: #483838;
+  }
+
+  .logo_title:hover {
+    cursor: pointer;
   }
   
   h3 {
@@ -138,6 +151,10 @@ const HeaderStyle = styled.header`
   }
 
   @media only screen and (max-width: 768px) {
+    .logo_title {
+      display: none;
+    }
+
     .search_section {
       width: 70%;
     }
@@ -174,7 +191,10 @@ const HeaderStyle = styled.header`
   }
 
   @media only screen and (max-width: 320px) {
+    .logo_title {
+      display: none;
+    }
   }
 `;
 
-export default HeaderStyle;
+export default StyledHeader;

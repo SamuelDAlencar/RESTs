@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const HomeStyle = styled.main`
+const StyledHome = styled.main`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 15px 15px;
 
@@ -21,7 +21,7 @@ const HomeStyle = styled.main`
     margin-bottom: 15px;
     transition: ease-in-out 0.1s;
   }
-  
+
   .inactive_filter_button {
     border: 0;
     border-bottom: 1px solid #826464;
@@ -42,7 +42,7 @@ const HomeStyle = styled.main`
   .active_filter_button {
     border: 0;
     background-color: inherit;
-    color: #333333;
+    color: #42855B;
     padding: 15px;
     font-size: 150%;
     margin: 0 15px;
@@ -60,6 +60,16 @@ const HomeStyle = styled.main`
     justify-content: space-around;
     flex-flow: row wrap;
     padding: 30px 15px;
+  }
+
+  .notFound_p {
+    font-size: 130%;
+    color: #333333;
+    margin: 50px 0;
+  }
+
+  .notFound_p span {
+    color: #42855B;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -93,4 +103,4 @@ const HomeStyle = styled.main`
   }
 `;
 
-export default HomeStyle;
+export default StyledHome;
