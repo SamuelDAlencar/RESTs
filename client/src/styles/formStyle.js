@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import loginBackground from '../../images/login-background.jpg';
+import loginBackground from '../images/login-background.jpg';
 
-const StyledLogin = styled.main`
+const StyledForm = styled.main`
   background-image: url(${loginBackground});
   background-position: top;
   height: 100vh;
   display: flex;
   margin: auto;
   
-  section {
+  .main_section {
     color: white;
     margin: 0 5vw;
     background-color: #90B77D;
@@ -47,7 +47,7 @@ const StyledLogin = styled.main`
     font-family: 'Delius Swash Caps', cursive;
   }
 
-  label {
+  .login_label {
     color: rgba(255, 255, 255, 0.70);
     text-align: center;
     font-size: 150%;
@@ -56,14 +56,27 @@ const StyledLogin = styled.main`
     width: 80%;
   }
 
+  .register_label_section {
+    width: 100%;
+  }
+
+  .register_label {
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px auto;
+  }
+
   span {
-    margin-top: 5px;
+    margin-top: 15px;
     color: #ff8080;
     align-self: flex-start;
     text-align: left;
   }
 
-  input {
+  .login_input {
     border: 0;
     background-color: white;
     border-radius: 5px;
@@ -77,13 +90,38 @@ const StyledLogin = styled.main`
     color: rgb(50, 50, 50);
   }
 
+  .register_input {
+    border: 0;
+    background-color: white;
+    border-radius: 5px;
+    border-bottom: 1px solid grey;
+    padding: 3%;
+    font-size: 100%;
+    outline: none;
+    transition: ease-in-out 0.1s;
+    width: 100%;
+    margin-top: 8px;
+    color: rgb(50, 50, 50);
+  }
+
+  .loginOption {
+    color: white;
+    text-decoration: underline #42855B;
+    transition: ease-in-out 0.1s;
+  }
+
+  .loginOption:hover {
+    cursor: pointer;
+    font-size: 120%;
+  }
+
   input:focus {
     border-bottom: 5px solid #42855B;
   }
 
   button {
     font-size: 160%;
-    width: 80%;
+    width: 100%;
     padding: 20px 80px;
     border: 0;
     border-radius: 7px;
@@ -91,6 +129,16 @@ const StyledLogin = styled.main`
     background-color: #42855B;
     transition: ease-in-out 0.1s;
     font-weight: 700;
+    margin: 5px 0;
+  }
+
+  button:nth-of-type(2) {
+    border: 0;
+    background-color: inherit;
+    text-decoration: underline #42855B;
+    color: white;
+    width: fit-content;
+    align-self: center;
   }
 
   button:disabled {
@@ -106,6 +154,17 @@ const StyledLogin = styled.main`
     cursor: pointer;
     background-color: #90B77D;
   }
+
+  button:nth-of-type(2):hover {
+    background-color: inherit;
+  }
+
+  .button_section {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
 `;
 
-export default StyledLogin;
+export default StyledForm;

@@ -31,7 +31,25 @@ const logIn = async (email, password) => {
   return { token, username };
 };
 
+const register = async (username, email, password) => {
+  const encryptedPassword = md5(password);
+  const encryptedEmail = md5(email);
+
+  const userExists = await model.getByEmail(encryptedEmail);
+  
+  if (userExists) throw httpError(409, 'Um usuário com este email já esta registrado');
+
+  const user = await model.register(username, encryptedEmail, encryptedPassword);
+  
+  const { id } = user;
+
+  const token = generateToken({ id, username });
+
+  return { token, username };
+};
+
 module.exports = {
   getByEmail,
-  logIn
+  logIn,
+  register
 };
