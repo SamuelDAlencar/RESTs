@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "install:apps": "npm i && cd client/ && npm i && cd ../server && npm i",
-    "server": "npm start --prefix client",
-    "client": "npm start --prefix server",
+    "pre:start:server": "cd server && npm run pre:start",
+    "start:server": "npm start --prefix client",
+    "start:client": "npm start --prefix server",
     "start:apps": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:server": "cd server && npm test",
+    "test:client": "cd client && npm test"
   },
   "repository": {
     "type": "git",
