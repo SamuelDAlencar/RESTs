@@ -123,11 +123,13 @@ export default function Login() {
               {wrongPassword && <span>Senha inválida</span>}
               {invalidPassword && <span>Senhas devem possuir no mínimo 6 caractéres</span>}
             </label>
-            <button
-              onClick={login}
-            >
-              Entrar
-            </button>
+            <section className='button_section'>
+              <button
+                onClick={login}
+              >
+                Entrar
+              </button>
+            </section>
           </>)}
       </section>
     </StyledForm>
