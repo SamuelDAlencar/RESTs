@@ -5,6 +5,10 @@ const getByEmail = (email) => user
     where: { email },
   });
 
+const register = (username, email, password) => user
+  .create({ username, email, password });
+
 module.exports = {
-  getByEmail
+  getByEmail,
+  register
 };

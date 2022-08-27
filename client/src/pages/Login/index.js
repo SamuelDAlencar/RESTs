@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import axiosRequest from '../../helpers/axiosRequest';
-import StyledLogin from './style';
+import StyledForm from '../../styles/formStyle';
 import cacheUser from '../../helpers/cacheUser';
 import logo from '../../images/logo.jpg';
 
@@ -66,8 +66,8 @@ export default function Login() {
   };
 
   return (
-    <StyledLogin>
-      <section>
+    <StyledForm>
+      <section className='main_section'>
         {emailConfirmed && (
           <IoIosArrowRoundBack
             className='back_arrow_icon'
@@ -82,9 +82,10 @@ export default function Login() {
 
         {!emailConfirmed ? (
           <>
-            <label htmlFor='email'>
+            <label className='login_label' htmlFor='email'>
               Insira seu e-mail cadastrado
               <input
+                className='login_input'
                 id='email'
                 value={email}
                 placeholder='seu@email.com'
@@ -93,18 +94,26 @@ export default function Login() {
               {notRegistered && <span>E-mail não registrado, ainda não se cadastrou?</span>}
               {invalidEmail && <span>E-mail inválido</span>}
             </label>
-            <button
-              onClick={verifyEmail}
-              disabled={invalidEmail}
-            >
-              Continuar
-            </button>
+            <section className='button_section'>
+              <button
+                onClick={verifyEmail}
+                disabled={invalidEmail}
+              >
+                Continuar
+              </button>
+              <button
+                onClick={() => navigate('/register')}
+              >
+                Registrar
+              </button>
+            </section>
           </>
         ) : (
           <>
-            <label htmlFor='password'>
+            <label className='login_label' htmlFor='password'>
               Sua senha
               <input
+                className='login_input'
                 type='password'
                 id='password'
                 value={password}
@@ -121,6 +130,6 @@ export default function Login() {
             </button>
           </>)}
       </section>
-    </StyledLogin>
+    </StyledForm>
   );
 }

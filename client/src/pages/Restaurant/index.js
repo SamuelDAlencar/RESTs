@@ -45,7 +45,7 @@ export default function Restaurant() {
 
   return (
     <>
-      <Header username={ user.username } />
+      <Header />
       <StyledRestaurant>
         <section className='restInfo_section'>
           <img src={restaurantIcon} />

@@ -9,7 +9,6 @@ import FilterButton from '../../components/FilterButton';
 
 export default function Home() {
   const {
-    user,
     requestData,
     results,
     filterBy,
@@ -22,7 +21,7 @@ export default function Home() {
 
   return (
     <>
-      <Header username={user.username} />
+      <Header />
       <StyledHome>
         <section className='content_section'>
           <section className='filter_section'>
