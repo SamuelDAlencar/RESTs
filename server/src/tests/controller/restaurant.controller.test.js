@@ -5,8 +5,9 @@ const { expect } = chai;
 
 const service = require('../../api/service/restaurant.service');
 const controller = require('../../api/controller/restaurant.controller');
+const restaurantMock = require('../mocks/restaurant');
 
-describe('2 - restaurantController', () => {
+describe('1.2 - restaurantController', () => {
   describe('getAll - Se houver restaurantes no banco de dados:', () => {
     const req = {};
     const res = {};
@@ -16,32 +17,7 @@ describe('2 - restaurantController', () => {
       res.json = sinon.stub().returns({});
 
       sinon.stub(service, 'getAll')
-        .resolves([
-          {
-            id: 1,
-            name: 'Restaurante 1',
-            address: 'endereço, 1',
-            phone: '+55 (55) 5555-5555',
-          },
-          {
-            id: 2,
-            name: 'Restaurante 2',
-            address: 'endereço, 1',
-            phone: '+55 (55) 5555-5555',
-          },
-          {
-            id: 3,
-            name: 'Restaurante 3',
-            address: 'endereço, 1',
-            phone: '+55 (55) 5555-5555',
-          },
-          {
-            id: 4,
-            name: 'Restaurante 4',
-            address: 'endereço, 1',
-            phone: '+55 (55) 5555-5555',
-          },
-        ]);
+        .resolves(restaurantMock.restaurants);
     });
 
     after(() => {
@@ -96,12 +72,7 @@ describe('2 - restaurantController', () => {
       res.json = sinon.stub().returns({});
 
       sinon.stub(service, 'getByName')
-        .resolves([{
-          id: 1,
-          name: 'Um Restaurante',
-          address: 'endereço, 1',
-          phone: '+55 (55) 5555-5555',
-        }]);
+        .resolves([restaurantMock.restaurant]);
     });
 
     after(() => {
@@ -169,12 +140,7 @@ describe('2 - restaurantController', () => {
       res.json = sinon.stub().returns({});
 
       sinon.stub(service, 'getById')
-        .resolves({
-          id: 1,
-          name: 'Um Bar',
-          address: 'endereço, 1',
-          phone: '+55 (55) 5555-5555',
-        });
+        .resolves(restaurantMock.restaurant);
     });
 
     after(() => {
