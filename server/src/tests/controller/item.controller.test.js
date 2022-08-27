@@ -6,7 +6,7 @@ const { expect } = chai;
 const service = require('../../api/service/item.service');
 const controller = require('../../api/controller/item.controller');
 
-describe('3 - itemController', () => {
+describe('1.3 - itemController', () => {
   describe('getAll - Se houver itens no banco de dados:', () => {
     const req = {};
     const res = {};

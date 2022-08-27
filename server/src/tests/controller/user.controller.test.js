@@ -6,7 +6,7 @@ const { expect } = chai;
 const service = require('../../api/service/user.service');
 const controller = require('../../api/controller/user.controller');
 
-describe('1 - userController', () => {
+describe('1.1 - userController', () => {
   describe('getByEmail - Se o email recebido via parametro estiver com o formato correto:', () => {
     const req = {
       params: {

@@ -6,7 +6,7 @@ const { expect } = chai;
 const service = require('../../api/service/user.service');
 const model = require('../../api/model/user.model');
 
-describe('1 - userService', () => {
+describe('2.1 - userService', () => {
   describe('getByEmail - Se o email recebido via parametro estiver com o formato correto:', () => {
     const email = 'email@email.com';
     const encryptedEmail = '4f64c9f81bb0d4ee969aaf7b4a5a6f40';
