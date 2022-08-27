@@ -5,6 +5,7 @@ const { expect } = chai;
 
 const service = require('../../api/service/item.service');
 const controller = require('../../api/controller/item.controller');
+const itemMock = require('../mocks/item');
 
 describe('1.3 - itemController', () => {
   describe('getAll - Se houver itens no banco de dados:', () => {
@@ -16,36 +17,7 @@ describe('1.3 - itemController', () => {
       res.json = sinon.stub().returns({});
 
       sinon.stub(service, 'getAll')
-        .resolves([
-          {
-            id: 1,
-            name: 'Item 1',
-            description: 'Descrição do item',
-            restaurantId: 1,
-            price: '15',
-          },
-          {
-            id: 2,
-            name: 'Item 2',
-            description: 'Descrição do item',
-            restaurantId: 1,
-            price: '15',
-          },
-          {
-            id: 3,
-            name: 'Item 3',
-            description: 'Descrição do item',
-            restaurantId: 1,
-            price: '15',
-          },
-          {
-            id: 4,
-            name: 'Item 4',
-            description: 'Descrição do item',
-            restaurantId: 1,
-            price: '15',
-          },
-        ]);
+        .resolves(itemMock.items);
     });
 
     after(() => {
@@ -58,7 +30,8 @@ describe('1.3 - itemController', () => {
       expect(res.status.args[0][0]).to.be.equal(200);
       expect(res.json.args[0][0]).to.be.an('array');
       expect(res.json.args[0][0].length).to.be.greaterThan(0);
-      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price']);
+      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price', 'type']);
+      expect(res.json.args[0][0][0].type).to.be.oneOf(['food', 'drink']);
     });
   });
 
@@ -101,13 +74,7 @@ describe('1.3 - itemController', () => {
       res.json = sinon.stub().returns({});
 
       sinon.stub(service, 'getByQuery')
-        .resolves([{
-          id: 1,
-          name: 'Um Item',
-          description: 'Descrição do item',
-          restaurantId: 1,
-          price: '15',
-        }]);
+        .resolves([itemMock.item]);
     });
 
     after(() => {
@@ -119,7 +86,7 @@ describe('1.3 - itemController', () => {
 
       expect(res.status.args[0][0]).to.be.equal(200);
       expect(res.json.args[0][0][0]).to.be.an('object');
-      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price']);
+      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price', 'type']);
       expect(res.json.args[0][0][0].name).to.be.equal('Um Item');
     });
   });
@@ -144,6 +111,7 @@ describe('1.3 - itemController', () => {
           description: 'Descrição',
           restaurantId: 1,
           price: '15',
+          type: 'food'
         }]);
     });
 
@@ -156,7 +124,7 @@ describe('1.3 - itemController', () => {
 
       expect(res.status.args[0][0]).to.be.equal(200);
       expect(res.json.args[0][0][0]).to.be.an('object');
-      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price']);
+      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price', 'type']);
       expect(res.json.args[0][0][0].description).to.be.equal('Descrição');
     });
   });
@@ -180,12 +148,14 @@ describe('1.3 - itemController', () => {
           description: 'Descrição do item',
           restaurantId: 1,
           price: '15',
+          type: 'food'
         }, {
           id: 4,
           name: 'Uma bebida',
           description: 'Descrição do item',
           restaurantId: 1,
           price: '15',
+          type: 'drink'
         }]);
     });
 
@@ -198,7 +168,7 @@ describe('1.3 - itemController', () => {
 
       expect(res.status.args[0][0]).to.be.equal(200);
       expect(res.json.args[0][0].length).to.be.greaterThan(1);
-      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price']);
+      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price', 'type']);
     });
   });
 
@@ -221,12 +191,14 @@ describe('1.3 - itemController', () => {
           description: 'Descrição da bebida',
           restaurantId: 1,
           price: '15',
+          type: 'food'
         }, {
           id: 4,
           name: 'Uma bebida',
           description: 'Descrição da bebida',
           restaurantId: 1,
           price: '15',
+          type: 'drink'
         }]);
     });
 
@@ -239,7 +211,7 @@ describe('1.3 - itemController', () => {
 
       expect(res.status.args[0][0]).to.be.equal(200);
       expect(res.json.args[0][0].length).to.be.greaterThan(1);
-      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price']);
+      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price', 'type']);
     });
   });
 
@@ -256,26 +228,35 @@ describe('1.3 - itemController', () => {
       res.json = sinon.stub().returns({});
 
       sinon.stub(service, 'getByRestaurant')
-        .resolves({
-          id: 4,
+        .resolves([{
+          id: 1,
           name: 'Sushi',
           description: 'Descrição do sushi',
           restaurantId: 1,
           price: '15',
-        });
+          type: 'food'
+        }, {
+          id: 4,
+          name: 'Arroz',
+          description: 'Descrição do arroz',
+          restaurantId: 1,
+          price: '15',
+          type: 'food'
+        }]);
     });
 
     after(() => {
       service.getByRestaurant.restore();
     });
 
-    it('Deve retornar o status OK (200) e um json contendo o item que pertence ao restaurante do id recebido', async () => {
+    it('Deve retornar o status OK (200) e um json contendo os itens que pertencem ao restaurante do id recebido', async () => {
       await controller.getByRestaurant(req, res);
 
       expect(res.status.args[0][0]).to.be.equal(200);
-      expect(res.json.args[0][0]).to.be.an('object');
-      expect(res.json.args[0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price']);
-      expect(res.json.args[0][0].restaurantId).to.be.equal(1);
+      expect(res.json.args[0][0]).to.be.an('array');
+      expect(res.json.args[0][0][0]).to.be.an('object');
+      expect(res.json.args[0][0][0]).to.have.keys(['id', 'name', 'description', 'restaurantId', 'price', 'type']);
+      expect(res.json.args[0][0][0].restaurantId).to.be.equal(1);
     });
   });
 });

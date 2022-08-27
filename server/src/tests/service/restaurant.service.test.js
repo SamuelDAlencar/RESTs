@@ -7,7 +7,7 @@ const service = require('../../api/service/restaurant.service');
 const model = require('../../api/model/restaurant.model');
 const restaurantMock = require('../mocks/restaurant');
 
-describe('1.2 - restaurantService', () => {
+describe('2.2 - restaurantService', () => {
   describe('getAll - Se houver restaurantes no banco de dados:', () => {
     before(() => {
       sinon.stub(model, 'getAll')
