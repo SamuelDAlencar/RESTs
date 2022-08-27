@@ -59,7 +59,7 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 
 ## 👷‍♂️ Testes
 
-Para testar a aplicação, entre na pasta que deseja testar (Front/Client: `./client`, Back/Servidor: `./server`) e rode o comando `npm test`
+Neste projeto está sendo feito uma cobertura de testes **unitários**, para testar a aplicação, entre na pasta que deseja testar (Front/Client: `./client`, Back/Servidor: `./server`) e rode o comando `npm test`
 
 > Obs: Testes ainda em construção, confira seu status na sessão **✅ status** deste readme
 
