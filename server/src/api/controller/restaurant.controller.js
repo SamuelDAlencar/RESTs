@@ -1,6 +1,6 @@
 const service = require('../service/restaurant.service');
 
-const getAll = async (req, res) => {
+const getAll = async (_req, res) => {
   const restaurants = await service.getAll();
 
   return res.status(200).json(restaurants);
