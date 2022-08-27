@@ -6,6 +6,7 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 
 *Front-end:*
   - [x] Página de login responsiva e campos de email e senha
+  - [x] Página de registro responsiva com campos de email, senha e usuário
   - [x] Rotas de usuário e de restaurantes criadas
   - [x] Página "home" responsiva listando todos os restaurantes disponíveis no banco
   - [x] Estilização dos restaurantes da home
@@ -64,7 +65,9 @@ Sem Docker:
 
 ## 👩‍💻 Utilizando a aplicação
 
-Atualmente a aplicação não possuí opção de cadastro, utilize um destes usuários para logar:
+Clique no botão `"Registrar"` ao entrar na aplicação, e insíra dados de login que **não sejam sensíveis**
+
+Caso prefira não fazer registro, basta utilizar um destes 3 usuários já cadastrados no banco:
 > (e-mail) - (senha)
   - Usuário 1: `fred@graodireto.com.br - 123Fred`
   - Usuário 2: `samuca@gmail.com - 1samu9`
