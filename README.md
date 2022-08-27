@@ -2,6 +2,30 @@
 
 O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo gastronômico, que após logado (email e senha criptografados), traz para o usuário uma lista de restaurantes e suas respectivas informações, como endereço, número de telefone, e seus cardápios, contendo detalhes de cada item do menu como descrição e preço
 
+## 🧰 Tecnologias e ferramentas utilizadas
+
+- [Javascript](https://www.javascript.com/) - Linguagem de programação utilizada
+- [React](https://reactjs.org/) - Biblioteca front-end para componentização
+- [React Router](https://reactrouter.com/en/main) - Biblioteca React para gerenciamento de rotas
+- [ContextAPI](https://reactjs.org/docs/context.html) - Recurso React para gerenciamento de estado
+- [React Icons](https://react-icons.github.io/react-icons/) - Biblioteca React de ícones
+- [Styled Components](https://styled-components.com/) - Biblioteca React para estilização de componentes
+- [Node.js](https://nodejs.org/en/) - Campo de execução JS para back-end
+- [Express.js](https://expressjs.com/) - Framework Node.js
+- [Sequelize](https://sequelize.org/) - ORM para requisições ao banco relacional MySQL
+- [MySQL](https://www.mysql.com/) - Banco de dados relacional utilizado
+- [Docker](https://www.docker.com/) - Serviço de containerização
+- [Axios](https://axios-http.com/docs/intro) - Biblioteca front-end para requisições a API
+- [Concurrently](https://www.npmjs.com/package/concurrently) - Pacote utilizado para startar o front e back simultaneamente
+- [Jsonwebtoken](https://jwt.io/) - Biblioteca utilizada para gerar token de validação do usuário
+- [md5](https://www.md5hashgenerator.com/) - Biblioteca que gera hash a partir de um payload
+- [joi](https://www.npmjs.com/package/joi) - Utilizada para validar campos de login
+- [Express Async Errors](https://www.npmjs.com/package/express-async-errors) - Captura erros assíncronos gerados no express
+- [dotenv](https://www.npmjs.com/package/dotenv) - Alocar variáveis de ambiente
+- [mocha](https://mochajs.org/) - Framework de testes Node.js
+- [chai](https://www.chaijs.com/) - Biblioteca de assertions Node.js
+- [sinon](https://sinonjs.org/) - Biblioteca de stubs e mocks para Javascript
+
 ## ✅ Status
 
 *Front-end:*
@@ -15,6 +39,10 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [x] Tela de informações de um restaurante mostrando o nome, endereço e telefone do mesmo, além da lista de itens do menu (com nome, decrição e preço)
   - [x] Opção na barra de navegação que possibilita o usuário retornar a "home"
   - [x] Opção na barra de navegação que possibilita o usuário deslogar da aplicação
+  - [ ] Testes da página "login"
+  - [ ] Testes da página "register"
+  - [ ] Testes da página "home"
+  - [ ] Testes da página "restaurants"
 
 *Back-end:*
   - [x] Criação da estrutura e relacionamentos do banco de dados
@@ -23,8 +51,17 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [x] Popular o banco com usuários pré cadastrados (e-mail e senha criptografados), restaurantes e seus respectivos itens
   - [x] No login, validar previamente se o e-mail se encontra no banco
   - [x] Na home, validar se o usuário possui acesso a pagina atráves de um token gerado no login
+  - [x] Testes dos "controllers"
+  - [ ] Testes das "services"
+  - [ ] Testes das "models"
 
 > Obs: Projeto ainda recebendo alguns ajustes!
+
+## 👷‍♂️ Testes
+
+Para testar a aplicação, entre na pasta que deseja testar (Front/Client: `./client`, Back/Servidor: `./server`) e rode o comando `npm test`
+
+> Obs: Testes ainda em construção, confira seu status na sessão **✅ status** deste readme
 
 ## 👩‍💻 Acesse o projeto
 
@@ -76,27 +113,6 @@ Caso prefira não fazer registro, basta utilizar um destes 3 usuários já cadas
 Após logado e autenticado, basta conferir os restaurantes disponíveis e vasculhar seus cardápios 😋
 
 > ⚠ Tela de perfil ainda não implementada, então o botão que indica o perfil da navbar faz **logout** ⚠
-
-## 🧰 Tecnologias e ferramentas utilizadas
-
-- [Javascript](https://www.javascript.com/) - Linguagem de programação utilizada
-- [React](https://reactjs.org/) - Biblioteca front-end para componentização
-- [React Router](https://reactrouter.com/en/main) - Biblioteca React para gerenciamento de rotas
-- [ContextAPI](https://reactjs.org/docs/context.html) - Recurso React para gerenciamento de estado
-- [React Icons](https://react-icons.github.io/react-icons/) - Biblioteca React de ícones
-- [Styled Components](https://styled-components.com/) - Biblioteca React para estilização de componentes
-- [Node.js](https://nodejs.org/en/) - Campo de execução JS para back-end
-- [Express.js](https://expressjs.com/) - Framework Node.js
-- [Sequelize](https://sequelize.org/) - ORM para requisições ao banco relacional MySQL
-- [MySQL](https://www.mysql.com/) - Banco de dados relacional utilizado
-- [Docker](https://www.docker.com/) - Serviço de containerização
-- [Axios](https://axios-http.com/docs/intro) - Biblioteca front-end para requisições a API
-- [Concurrently](https://www.npmjs.com/package/concurrently) - Pacote utilizado para startar o front e back simultaneamente
-- [Jsonwebtoken](https://jwt.io/) - Biblioteca utilizada para gerar token de validação do usuário
-- [md5](https://www.md5hashgenerator.com/) - Biblioteca que gera hash a partir de um payload
-- [joi](https://www.npmjs.com/package/joi) - Utilizada para validar campos de login
-- [Express Async Errors](https://www.npmjs.com/package/express-async-errors) - Captura erros assíncronos gerados no express
-- [dotenv](https://www.npmjs.com/package/dotenv) - Alocar variáveis de ambiente
 
 <hr />
 
