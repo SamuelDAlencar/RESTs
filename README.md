@@ -52,8 +52,8 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [x] No login, validar previamente se o e-mail se encontra no banco
   - [x] Na home, validar se o usuário possui acesso a pagina atráves de um token gerado no login
   - [x] Testes dos "controllers"
-  - [ ] Testes das "services"
-  - [ ] Testes das "models"
+  - [x] Testes das "services"
+  - [x] Testes das "models"
 
 > Obs: Projeto ainda recebendo alguns ajustes!
 
@@ -61,7 +61,7 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 
 Neste projeto está sendo feito uma cobertura de testes **unitários**, para testar a aplicação, entre na pasta que deseja testar (Front/Client: `./client`, Back/Servidor: `./server`) e rode o comando `npm test`
 
-> Obs: Testes ainda em construção, confira seu status na sessão **✅ status** deste readme
+> Obs: Testes front-end ainda não foram criados, confira seu status na sessão **✅ status** deste readme
 
 ## 👩‍💻 Acesse o projeto
 
