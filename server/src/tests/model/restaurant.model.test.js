@@ -3,23 +3,23 @@ const chai = require('chai');
 const sinon = require('sinon');
 const { expect } = chai;
 
-const service = require('../../api/service/restaurant.service');
 const model = require('../../api/model/restaurant.model');
+const sequelizeModel = require('../../database/models').restaurant;
 const restaurantMock = require('../mocks/restaurant');
 
-describe('2.2 - restaurantService', () => {
+describe('3.2 - restaurantModel', () => {
   describe('getAll - Se houver restaurantes no banco de dados:', () => {
     before(() => {
-      sinon.stub(model, 'getAll')
+      sinon.stub(sequelizeModel, 'findAll')
         .resolves(restaurantMock.restaurants);
     });
 
     after(() => {
-      model.getAll.restore();
+      sequelizeModel.findAll.restore();
     });
 
     it('Deve retornar um json contendo um array de restaurantes', async () => {
-      const response = await service.getAll();
+      const response = await model.getAll();
 
       expect(response).to.be.an('array');
       expect(response.length).to.be.greaterThan(0);
@@ -29,16 +29,16 @@ describe('2.2 - restaurantService', () => {
 
   describe('getAll - Se NÃO houver restaurantes no banco de dados:', () => {
     before(() => {
-      sinon.stub(model, 'getAll')
+      sinon.stub(sequelizeModel, 'findAll')
         .resolves([]);
     });
 
     after(() => {
-      model.getAll.restore();
+      sequelizeModel.findAll.restore();
     });
 
     it('Deve retornar um json contendo um array vazio', async () => {
-      const response = await service.getAll();
+      const response = await model.getAll();
 
       expect(response).to.be.an('array');
       expect(response.length).to.be.equal(0);
@@ -49,18 +49,17 @@ describe('2.2 - restaurantService', () => {
     const name = 'Um Restaurante';
 
     before(() => {
-      sinon.stub(model, 'getByName')
+      sinon.stub(sequelizeModel, 'findAll')
         .resolves([restaurantMock.restaurant]);
     });
 
     after(() => {
-      model.getByName.restore();
+      sequelizeModel.findAll.restore();
     });
 
     it('Deve retornar o restaurante que condiz com o nome buscado', async () => {
-      const response = await service.getByName(name);
+      const response = await model.getByName(name);
 
-      sinon.assert.calledWith(model.getByName, name);
       expect(response).to.be.an('array');
       expect(response[0]).to.be.an('object');
       expect(response[0]).to.have.keys(['id', 'name', 'address', 'phone']);
@@ -72,7 +71,7 @@ describe('2.2 - restaurantService', () => {
     const name = 'Um';
 
     before(() => {
-      sinon.stub(model, 'getByName')
+      sinon.stub(sequelizeModel, 'findAll')
         .resolves([{
           id: 1,
           name: 'Um Restaurante',
@@ -87,14 +86,13 @@ describe('2.2 - restaurantService', () => {
     });
 
     after(() => {
-      model.getByName.restore();
+      sequelizeModel.findAll.restore();
     });
 
 
     it('Deve retornar os restaurantes que condizem com o nome buscado', async () => {
-      const response = await service.getByName(name);
+      const response = await model.getByName(name);
 
-      sinon.assert.calledWith(model.getByName, name);
       expect(response.length).to.be.greaterThan(1);
       expect(response[0]).to.have.keys(['id', 'name', 'address', 'phone']);
       expect(response[0].name).to.include(name);
@@ -105,7 +103,7 @@ describe('2.2 - restaurantService', () => {
     const id = 1;
 
     before(() => {
-      sinon.stub(model, 'getById')
+      sinon.stub(sequelizeModel, 'findOne')
         .resolves({
           id: 1,
           name: 'Um Bar',
@@ -115,11 +113,11 @@ describe('2.2 - restaurantService', () => {
     });
 
     after(() => {
-      model.getById.restore();
+      sequelizeModel.findOne.restore();
     });
 
     it('Deve retornar um json contendo o restaurante que corresponde ao id', async () => {
-      const response = await service.getById(id);
+      const response = await model.getById(id);
 
       expect(response).to.be.an('object');
       expect(response).to.have.keys(['id', 'name', 'address', 'phone']);
