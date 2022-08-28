@@ -85,7 +85,7 @@ describe('2.1 - userService', () => {
       const response = await service.logIn(email, password);
 
       sinon.assert.calledWith(model.getByEmail, encryptedEmail);
-      expect(response).to.have.keys(['token', 'username']);
+      expect(response).to.have.keys(['token', 'email', 'username']);
     });
   });
 
@@ -179,7 +179,7 @@ describe('register - Se o nome de usuáro, email e senha recebidos via parametro
     const response = await service.register(username, email, password);
 
     sinon.assert.calledWith(model.getByEmail, encryptedEmail);
-    expect(response).to.have.keys(['token', 'username']);
+    expect(response).to.have.keys(['token', 'email', 'username']);
   });
 });
 
