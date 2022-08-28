@@ -15,6 +15,7 @@ export default function Restaurant() {
   const [foods, setFoods] = useState([]);
   const [drinks, setDrinks] = useState([]);
   const [restaurant, setRestaurant] = useState();
+  const [mobileFilter, setMobileFilter] = useState('foods');
 
   const requestItems = async () => {
     const response = await axiosRequest('GET', {}, {
@@ -63,6 +64,54 @@ export default function Restaurant() {
               Número: <span>{restaurant?.phone}</span></h2>
           </section>
         </section>
+        {/* Versão mobile (- 500px) */}
+        <section className='mobile_buttons_section'>
+          <button
+            className={mobileFilter === 'foods' ? 'active_mobile_button' : 'inactive_mobile_button'}
+            onClick={() => setMobileFilter('foods')}
+          >
+            Cardápio
+          </button>
+          <button
+            className={mobileFilter === 'drinks' ? 'active_mobile_button' : 'inactive_mobile_button'}
+            onClick={() => setMobileFilter('drinks')}
+          >
+            Bebidas
+          </button>
+        </section>
+        <section className='foods_section_mobile'>
+          {mobileFilter === 'foods' && (
+            <section className='food_list'>
+              {foods?.map(({ id, name, description, price, type }) => {
+                return (
+                  <Card
+                    key={id}
+                    name={name}
+                    description={description}
+                    price={price}
+                    type={type}
+                  />
+                );
+              })}
+            </section>)}
+        </section>
+        <section className='drinks_section_mobile'>
+          {mobileFilter === 'drinks' && (
+            <section className='drink_list'>
+              {drinks?.map(({ id, name, description, price, type }) => {
+                return (
+                  <Card
+                    key={id}
+                    name={name}
+                    description={description}
+                    price={price}
+                    type={type}
+                  />
+                );
+              })}
+            </section>)}
+        </section>
+        {/* Versão desktop (+ 500px) */}
         <section className='foods_section'>
           <h1>Cardápio</h1>
           <section className='food_list'>

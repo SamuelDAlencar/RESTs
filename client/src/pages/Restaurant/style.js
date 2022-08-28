@@ -8,6 +8,14 @@ const StyledRestaurant = styled.section`
   border-radius: 0 0 15px 15px;
   padding: 0 0 30px;
 
+  .mobile_buttons_section {
+    display: none;
+  }
+
+  .foods_section_mobile, .drinks_section_mobile {
+    display: none;
+  }
+
   .restInfo_section {
     display: flex;
     align-items: center;
@@ -112,13 +120,61 @@ const StyledRestaurant = styled.section`
   }
 
   @media only screen and (max-width: 500px) {
+    width: 90%;
+
+    .foods_section_mobile, .drinks_section_mobile {
+      display: initial;
+    }
+
+    .foods_section, .drinks_section {
+      display: none;
+    }
+
+    .mobile_buttons_section {
+      width: 100%;
+      display: flex;
+    }
+
+    .inactive_mobile_button {
+      border: 0;
+      border-bottom: 1px solid #826464;
+      background-color: inherit;
+      color: #404040;
+      padding: 20px 20px 10px;
+      font-size: 150%;
+      border-radius: 5px 5px 0 0;
+      width: 50%;
+    }
+    
+    .inactive_mobile_button:hover {
+      border-bottom: 3px solid #826464;
+      cursor: pointer;
+      transition: ease-in-out 0.1s;
+    }
+
+    .active_mobile_button {
+      border: 0;
+      background-color: inherit;
+      color: #42855B;
+      padding: 20px;
+      font-size: 160%;
+      border-radius: 5px 5px 0 0;
+      border-bottom: 3px solid #42855B;
+      font-weight: 700;
+      width: 50%;
+    }
+
+    .active_mobile_button:hover {
+      cursor: pointer;
+      transition: ease-in-out 0.1s;
+    }
+
     .foods_section h1:nth-of-type(1), .drinks_section h1:nth-of-type(1) {
-      margin-top: 30px;
-      text-align: center;
+      display: none;
     }
 
     .food_list, .drink_list {
-      padding: 30px 0;
+      padding: 0;
     }
 
     .restInfo_section section h1 {
