@@ -121,6 +121,7 @@ const StyledRestaurant = styled.section`
 
   @media only screen and (max-width: 500px) {
     width: 90%;
+    margin-bottom: 160px;
 
     .foods_section_mobile, .drinks_section_mobile {
       display: initial;

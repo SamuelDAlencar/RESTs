@@ -138,6 +138,8 @@ const StyledHome = styled.main`
   }
 
   @media only screen and (max-width: 500px) {
+    margin-bottom: 160px;
+
     .filter_section {
       position: fixed;
       background-color: white;
