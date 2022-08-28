@@ -7,7 +7,7 @@ import { BsSearch } from 'react-icons/bs';
 import HomeContext from '../../context/HomeContext';
 import logo from '../../images/logo.jpg';
 
-export default function Header({ restaurant }) {
+export default function Header({ home, profile }) {
   const {
     input,
     setInput,
@@ -19,7 +19,7 @@ export default function Header({ restaurant }) {
   const navigate = useNavigate();
 
   return (
-    <StyledHeader restaurant={restaurant}>
+    <StyledHeader profile={profile} home={home}>
       <a
         onClick={() => navigate('/')}
         className={'logo_title'}
@@ -29,7 +29,7 @@ export default function Header({ restaurant }) {
         Spot
       </a>
 
-      {!restaurant && (
+      {home && (
         <section className='search_section'>
           <input
             onChange={({ target: { value } }) => setInput(value)}
@@ -46,7 +46,7 @@ export default function Header({ restaurant }) {
       <section className={'nav_section'}>
         <button
           className='nav_button'
-          onClick={() => navigate('/login')}
+          onClick={() => navigate('/profile')}
         >
           {username
             ? <p className='username'>{`Oi ${username} :D`}</p>
@@ -66,5 +66,6 @@ export default function Header({ restaurant }) {
 }
 
 Header.propTypes = {
-  restaurant: PropTypes.bool,
+  home: PropTypes.bool,
+  profile: PropTypes.bool,
 };

@@ -131,6 +131,7 @@ const StyledHeader = styled.header`
     font-size: 150%;
     margin-right: 15px;
     font-weight: 700;
+    display: ${props => props.profile && 'none'};
   }
 
   @media only screen and (max-width: 1200px) {
@@ -171,7 +172,7 @@ const StyledHeader = styled.header`
     }
 
     .logo_title {
-      display: ${props => !props.restaurant && 'none'};
+      display: ${props => props.home && 'none'};
     }
 
     .search_section {
@@ -217,7 +218,7 @@ const StyledHeader = styled.header`
     box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 10);
 
     .logo_title {
-      display: ${props => !props.restaurant && 'none'};
+      display: ${props => props.home && 'none'};
     }
   }
 `;

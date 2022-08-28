@@ -80,7 +80,7 @@ const StyledHome = styled.main`
   .notFound_p {
     font-size: 130%;
     color: #333333;
-    margin: 50px 0;
+    margin: 100px 0;
   }
   
   .searchingFor_p {
@@ -110,7 +110,8 @@ const StyledHome = styled.main`
     }
 
     .notFound_p {
-      margin: 50px;
+      margin: 100px 0 50px;
+      text-align: center;
     }
 
     .searchingFor_p {

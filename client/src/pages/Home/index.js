@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <Header />
+      <Header home />
       <StyledHome>
         <section className='content_section'>
           <section className='filter_section'>
