@@ -49,7 +49,7 @@ export default function Restaurant() {
       <Header />
       <StyledRestaurant>
         <section className='restInfo_section'>
-          <img src={restaurantIcon} />
+          <img alt='Restaurant_icon' src={restaurantIcon} />
           <section>
             <h1>{restaurant?.name}</h1>
             <h2>

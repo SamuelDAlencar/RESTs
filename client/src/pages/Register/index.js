@@ -48,16 +48,16 @@ export default function Register() {
           className='back_arrow_icon'
           onClick={() => navigate('/login')}
         />
-        <h1>
+        <h1 className='register_title'>
           {/* Creditos da Logo: https://www.flaticon.com/free-icon/placeholder_1147907 */}
-          <img className='logo_jpg' src={logo} />
+          <img alt='Spot_logo' className='register_logo' src={logo} />
           Spot
         </h1>
         <section className='register_label_section'>
           <label className='register_label' htmlFor='email'>
             Seu nome de usuário
             <input
-              className='register_input'
+              className={(invalidFields && username.length < 3) ? 'invalid login_input' : 'login_input'}
               id='username'
               value={username}
               placeholder='Seu_Nome de-usuario'
@@ -66,7 +66,7 @@ export default function Register() {
           <label className='register_label' htmlFor='email'>
             Insira o e-mail que deseja utilizar
             <input
-              className='register_input'
+              className={(invalidFields && !email) ? 'invalid login_input' : 'login_input'}
               id='email'
               value={email}
               placeholder='seu@email.com'
@@ -75,7 +75,8 @@ export default function Register() {
           <label className='register_label' htmlFor='password'>
             Senha de acesso
             <input
-              className='register_input'
+              type='password'
+              className={(invalidFields && password.length < 6) ? 'invalid login_input' : 'login_input'}
               id='password'
               value={password}
               placeholder='sua_senha_123_secreta'
