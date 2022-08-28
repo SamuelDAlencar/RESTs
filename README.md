@@ -114,6 +114,10 @@ Após logado e autenticado, basta conferir os restaurantes disponíveis e vascul
 
 > ⚠ Tela de perfil ainda não implementada, então o botão que indica o perfil da navbar faz **logout** ⚠
 
+## 📲 Bonus: versão mobile
+
+Ao alcancar uma resolução **menor ou igual a 500px**, a aplicação passará a ter um visual que simula um app mobile
+
 <hr />
 
-> README sendo constantemente atualizado ✍
+> 🌟 Ficaria feliz demais em receber alguns feedbacks de melhoria 🥳 o projeto está sendo desenvolvido com muito carinho 🌟
