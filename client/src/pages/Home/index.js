@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from 'react';
-// import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Card from '../../components/Card';
 import HomeContext from '../../context/HomeContext';
@@ -77,7 +76,6 @@ export default function Home() {
           </section>
         </section>
       </StyledHome>
-      {/* <Footer /> */}
     </>
   );
 }

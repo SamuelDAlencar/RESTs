@@ -24,7 +24,7 @@ export default function Header() {
         className='logo_title'
       >
         {/* Creditos da Logo: https://www.flaticon.com/free-icon/placeholder_1147907 */}
-        <img className='logo_jpg' src={logo} />
+        <img alt='Logo_jpg' className='logo_jpg' src={logo} />
         Spot
       </a>
 

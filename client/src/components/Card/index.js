@@ -22,7 +22,7 @@ export default function Card({ id, name, address, phone, description, price, typ
         <StyledCard
           onClick={() => navigate(`/restaurant/${id}`)}
         >
-          <img src={type === 'food' ? foodIcon : drinkIcon} />
+          <img alt={type === 'food' ? 'Food_icon' : 'Drink_icon'} src={type === 'food' ? foodIcon : drinkIcon} />
           <section>
             <p className='card_name'>{name}</p>
             <p className='card_description'>
@@ -35,7 +35,7 @@ export default function Card({ id, name, address, phone, description, price, typ
         <StyledCard
           onClick={() => navigate(`/restaurant/${id}`)}
         >
-          <img src={restaurantIcon} />
+          <img alt='Restaurant_icon' src={restaurantIcon} />
           <section>
             <p className='card_name'>{name}</p>
             <p className='card_address'>

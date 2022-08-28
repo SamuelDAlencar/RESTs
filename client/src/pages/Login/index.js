@@ -12,30 +12,39 @@ export default function Login() {
   const [emailConfirmed, setEmailConfirmed] = useState(false);
   const [notRegistered, setNotRegistered] = useState(false);
   const [invalidEmail, setInvalidEmail] = useState(false);
+  const [emptyEmail, setEmptyEmail] = useState(false);
   const [invalidPassword, setInvalidPassword] = useState(false);
   const [wrongPassword, setWrongPassword] = useState(false);
 
   const navigate = useNavigate();
 
   const verifyEmail = async () => {
-    const user = await axiosRequest('POST', {}, {}, `user/email/${email}`);
-
-    user.status === 200 && setEmailConfirmed(true);
-
-    if (user.status === 404) {
-      setNotRegistered(true);
+    if (!email) {
+      setEmptyEmail(true);
 
       setTimeout(() => {
-        setNotRegistered(false);
+        setEmptyEmail(false);
       }, 1500);
-    }
+    } else {
+      const user = await axiosRequest('POST', {}, {}, `user/email/${email}`);
 
-    if (user.status === 400) {
-      setInvalidEmail(true);
+      user.status === 200 && setEmailConfirmed(true);
 
-      setTimeout(() => {
-        setInvalidEmail(false);
-      }, 1500);
+      if (user.status === 404) {
+        setNotRegistered(true);
+
+        setTimeout(() => {
+          setNotRegistered(false);
+        }, 1500);
+      }
+
+      if (user.status === 400) {
+        setInvalidEmail(true);
+
+        setTimeout(() => {
+          setInvalidEmail(false);
+        }, 1500);
+      }
     }
   };
 
@@ -76,7 +85,7 @@ export default function Login() {
         )}
         <h1>
           {/* Creditos da Logo: https://www.flaticon.com/free-icon/placeholder_1147907 */}
-          <img className='logo_jpg' src={logo} />
+          <img alt='Spot_logo' className='logo_jpg' src={logo} />
           Spot
         </h1>
 
@@ -85,7 +94,7 @@ export default function Login() {
             <label className='login_label' htmlFor='email'>
               Insira seu e-mail cadastrado
               <input
-                className='login_input'
+                className={(emptyEmail || invalidEmail) ? 'invalid login_input' : 'login_input'}
                 id='email'
                 value={email}
                 placeholder='seu@email.com'
@@ -93,6 +102,7 @@ export default function Login() {
 
               {notRegistered && <span>E-mail não registrado, ainda não se cadastrou?</span>}
               {invalidEmail && <span>E-mail inválido</span>}
+              {emptyEmail && <span>Insira um e-mail</span>}
             </label>
             <section className='button_section'>
               <button
@@ -113,7 +123,7 @@ export default function Login() {
             <label className='login_label' htmlFor='password'>
               Sua senha
               <input
-                className='login_input'
+                className={(!password && invalidPassword) || invalidPassword ? 'invalid login_input' : 'login_input'}
                 type='password'
                 id='password'
                 value={password}

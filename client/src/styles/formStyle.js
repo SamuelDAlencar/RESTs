@@ -24,6 +24,19 @@ const StyledForm = styled.main`
     -webkit-backdrop-filter: blur(6px);
   }
 
+  .register_title {
+    font-size: 350%;
+  }
+
+  .register_logo {
+    width: 80px;
+  }
+
+  .invalid {
+    border: 3px solid red !important;
+    /* color: red; */
+  }
+
   .back_arrow_icon {
     position: absolute;
     margin: 0 10px;
