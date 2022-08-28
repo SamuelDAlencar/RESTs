@@ -55,6 +55,7 @@ describe('1.1 - userController', () => {
       sinon.stub(service, 'logIn')
         .resolves({
           token: 'this.is.token',
+          email: 'email@email.com',
           username: 'userName'
         });
     });
@@ -67,7 +68,7 @@ describe('1.1 - userController', () => {
       await controller.logIn(req, res);
 
       expect(res.status.args[0][0]).to.be.equal(200);
-      expect(res.json.args[0][0]).to.have.keys(['token', 'username']);
+      expect(res.json.args[0][0]).to.have.keys(['token', 'email', 'username']);
     });
   });
 
@@ -88,6 +89,7 @@ describe('1.1 - userController', () => {
       sinon.stub(service, 'register')
         .resolves({
           token: 'this.is.token',
+          email: 'email@email.com',
           username: 'userName'
         });
     });
@@ -100,7 +102,7 @@ describe('1.1 - userController', () => {
       await controller.register(req, res);
 
       expect(res.status.args[0][0]).to.be.equal(201);
-      expect(res.json.args[0][0]).to.have.keys(['token', 'username']);
+      expect(res.json.args[0][0]).to.have.keys(['token', 'email', 'username']);
     });
   });
 });
