@@ -10,7 +10,10 @@
     "start:client": "npm start --prefix server",
     "start:apps": "concurrently \"npm run server\" \"npm run client\"",
     "test:server": "cd server && npm test",
-    "test:client": "cd client && npm test"
+    "test:client": "cd client && npm test",
+    "compose:up": "docker-compose up",
+    "compose:up:d": "docker-compose up -d && npm run pre:start:server",
+    "compose:down": "docker-compose down"
   },
   "repository": {
     "type": "git",
