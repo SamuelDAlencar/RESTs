@@ -28,7 +28,7 @@ const logIn = async (email, password) => {
 
   const token = generateToken({ id, username });
 
-  return { token, username };
+  return { token, username, email };
 };
 
 const register = async (username, email, password) => {
@@ -45,7 +45,7 @@ const register = async (username, email, password) => {
 
   const token = generateToken({ id, username });
 
-  return { token, username };
+  return { token, username, email };
 };
 
 module.exports = {

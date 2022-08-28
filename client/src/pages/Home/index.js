@@ -1,10 +1,11 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import Header from '../../components/Header';
 import Card from '../../components/Card';
 import HomeContext from '../../context/HomeContext';
 import StyledHome from './style';
 import Loading from '../../components/Loading';
 import FilterButton from '../../components/FilterButton';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const {
@@ -14,13 +15,20 @@ export default function Home() {
     searchedBy
   } = useContext(HomeContext);
 
+  const [user] = useState(JSON.parse(localStorage.getItem('user')));
+  const navigate = useNavigate();
+
   useEffect(() => {
     requestData();
   }, [filterBy]);
 
+  useEffect(() => {
+    if (!user) navigate('/login');
+  }, []);
+
   return (
     <>
-      <Header />
+      <Header home />
       <StyledHome>
         <section className='content_section'>
           <section className='filter_section'>
