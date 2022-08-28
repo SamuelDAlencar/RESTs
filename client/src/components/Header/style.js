@@ -205,7 +205,13 @@ const StyledHeader = styled.header`
     }
   }
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 500px) {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #483838;    
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 10);
+
     .logo_title {
       display: none;
     }

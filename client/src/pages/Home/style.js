@@ -101,6 +101,9 @@ const StyledHome = styled.main`
   }
 
   @media only screen and (max-width: 768px) {
+    background-color: white;
+    background: inherit;
+
     .filter_section {
       justify-content: space-around;
       flex-direction: column-reverse;
@@ -113,9 +116,10 @@ const StyledHome = styled.main`
     .searchingFor_p {
       margin-top: 30px;
     }
-
-    .filter_section button {
+      
+    .inactive_filter_button, .active_filter_button {
       width: 50%;
+      margin: 0;
     }
 
     .content_section {
@@ -133,9 +137,27 @@ const StyledHome = styled.main`
     }
   }
 
-  @media only screen and (max-width: 320px) {
-    .content_section {
+  @media only screen and (max-width: 500px) {
+    .filter_section {
+      position: fixed;
+      background-color: white;
+      top: 0;
+      width: 90%;
+    }
+
+    .filter_section button {
+      margin-top: 0;
+      padding-top: 0;
       width: 100%;
+    }
+
+    .filter_section section {
+      padding: 15px 0 0;
+    }
+
+    .content_section {
+      width: 90%;
+      margin-top: 60px;
     }
   }
 `;
