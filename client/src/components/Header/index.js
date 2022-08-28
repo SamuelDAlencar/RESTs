@@ -14,7 +14,7 @@ export default function Header({ home, profile }) {
     requestData
   } = useContext(HomeContext);
 
-  const [username] = useState(JSON.parse(localStorage.getItem('user')).username);
+  const [user] = useState(JSON.parse(localStorage.getItem('user')));
 
   const navigate = useNavigate();
 
@@ -48,8 +48,8 @@ export default function Header({ home, profile }) {
           className='nav_button'
           onClick={() => navigate('/profile')}
         >
-          {username
-            ? <p className='username'>{`Oi ${username} :D`}</p>
+          {user?.username
+            ? <p className='username'>{`Oi ${user?.username} :D`}</p>
             : <p className='login_button'>Login</p>
           }
           <IoPersonCircleSharp className='nav_icon' />

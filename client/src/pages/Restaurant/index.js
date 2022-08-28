@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axiosRequest from '../../helpers/axiosRequest';
 import Header from '../../components/Header';
 import Card from '../../components/Card';
@@ -16,6 +16,7 @@ export default function Restaurant() {
   const [drinks, setDrinks] = useState([]);
   const [restaurant, setRestaurant] = useState();
   const [mobileFilter, setMobileFilter] = useState('foods');
+  const navigate = useNavigate();
 
   const requestItems = async () => {
     const response = await axiosRequest('GET', {}, {
@@ -40,6 +41,7 @@ export default function Restaurant() {
   };
 
   useEffect(() => {
+    if (!user) navigate('/login');
     requestRestaurant();
     requestItems();
   }, []);
