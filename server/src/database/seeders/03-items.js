@@ -37,6 +37,41 @@ module.exports = {
           description: 'Garrafa pet Guarana 2 Litros',
           price: 8,
         },
+        {
+          restaurantId: 1,
+          name: 'Porção de macarrão',
+          type: 'food',
+          description: 'Porção completa de macarrão',
+          price: 12.50,
+        },
+        {
+          restaurantId: 1,
+          name: 'Lamen',
+          type: 'food',
+          description: 'Completo com frutos do mar',
+          price: 14,
+        },
+        {
+          restaurantId: 1,
+          name: 'Porção de batata',
+          type: 'food',
+          description: 'Batatinha frita com pedaços de bacon',
+          price: 10.50,
+        },
+        {
+          restaurantId: 1,
+          name: 'Limonada 1L',
+          type: 'drink',
+          description: 'Suco de limao natural',
+          price: 10,
+        },
+        {
+          restaurantId: 1,
+          name: 'Coca 2L',
+          type: 'drink',
+          description: 'Garrafa pet coca 2 Litros',
+          price: 8,
+        },
         // ---------------------------------------------------------------
         {
           restaurantId: 2,
@@ -104,10 +139,24 @@ module.exports = {
         },
         {
           restaurantId: 3,
-          name: 'Refrigerante lata',
+          name: 'Refrigerante 500ml',
           type: 'drink',
-          description: 'Refrigerante 150ml',
+          description: 'Refrigerante 500ml',
           price: 6,
+        },
+        {
+          restaurantId: 3,
+          name: 'Arroz com batata frita',
+          type: 'food',
+          description: 'Arroz bem cozido com batata frita',
+          price: 15,
+        },
+        {
+          restaurantId: 3,
+          name: 'Jarra de suco natural 2L',
+          type: 'drink',
+          description: 'Sabores: limão, laranja, manga',
+          price: 12.50,
         },
         // ---------------------------------------------------------------
         {
