@@ -46,7 +46,7 @@ export default function Restaurant() {
 
   return (
     <>
-      <Header />
+      <Header restaurant />
       <StyledRestaurant>
         <section className='restInfo_section'>
           <img alt='Restaurant_icon' src={restaurantIcon} />
