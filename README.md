@@ -89,7 +89,7 @@ Via Docker:
 
   - Clone o projeto: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
   - Dentro da raiz: `npm run compose:d`
-    > Caso queira rodar os containers acoplado ao terminal para acompanhar o status deles, rode somente `npm run compose:up`
+    > Caso queira rodar os containers acoplado ao terminal para acompanhar o status deles, rode somente `npm run compose:up`, e depois popule o banco em outro terminal com o comando `npm run pre:start:server` na raiz, ou `npm run pre:start` caso esteja na pasta /server
   - Caso não ocorra nenhum erro, acesse a página e faça login: `http://localhost:3000/login`
 
 Sem Docker:
