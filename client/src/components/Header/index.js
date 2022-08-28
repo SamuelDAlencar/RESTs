@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import StyledHeader from './style';
@@ -63,6 +62,3 @@ export default function Header() {
     </StyledHeader>
   );
 }
-Header.propTypes = {
-  username: PropTypes.string.isRequired
-};
