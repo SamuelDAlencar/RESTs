@@ -83,6 +83,49 @@ export default function Restaurant() {
         </section>
         <section className='foods_section_mobile'>
           {mobileFilter === 'foods' && (
+            foods.length !== 0 ? (
+              <section className='food_list'>
+                {foods?.map(({ id, name, description, price, type }) => {
+                  return (
+                    <Card
+                      key={id}
+                      name={name}
+                      description={description}
+                      price={price}
+                      type={type}
+                    />
+                  );
+                })}
+              </section>)
+              : (
+                <h1 className='no_menu'>
+                  Ops, parece que o <span>{restaurant?.name}</span> não publicou nenhum item ainda :(
+                </h1>))}
+        </section>
+        <section className='drinks_section_mobile'>
+          {mobileFilter === 'drinks' && (
+            foods.length !== 0 ? (
+              <section className='drink_list'>
+                {drinks?.map(({ id, name, description, price, type }) => {
+                  return (
+                    <Card
+                      key={id}
+                      name={name}
+                      description={description}
+                      price={price}
+                      type={type}
+                    />
+                  );
+                })}
+              </section>)
+              : (
+                <h1 className='no_menu'>
+                  Ops, parece que o <span>{restaurant?.name}</span> não publicou nenhuma bebida ainda :(
+                </h1>))}</section>
+        {/* Versão desktop (+ 500px) */}
+        <section className='foods_section'>
+          <h1>Cardápio</h1>
+          {foods.length !== 0 ? (
             <section className='food_list'>
               {foods?.map(({ id, name, description, price, type }) => {
                 return (
@@ -95,10 +138,17 @@ export default function Restaurant() {
                   />
                 );
               })}
-            </section>)}
+            </section>
+          )
+            : (
+              <h1 className='no_menu'>
+                Ops, parece que o <span>{restaurant?.name}</span> não publicou nenhum item ainda :(
+              </h1>)}
         </section>
-        <section className='drinks_section_mobile'>
-          {mobileFilter === 'drinks' && (
+
+        <section className='drinks_section'>
+          <h1>Bebidas</h1>
+          {foods.length !== 0 ? (
             <section className='drink_list'>
               {drinks?.map(({ id, name, description, price, type }) => {
                 return (
@@ -111,41 +161,12 @@ export default function Restaurant() {
                   />
                 );
               })}
-            </section>)}
-        </section>
-        {/* Versão desktop (+ 500px) */}
-        <section className='foods_section'>
-          <h1>Cardápio</h1>
-          <section className='food_list'>
-            {foods?.map(({ id, name, description, price, type }) => {
-              return (
-                <Card
-                  key={id}
-                  name={name}
-                  description={description}
-                  price={price}
-                  type={type}
-                />
-              );
-            })}
-          </section>
-        </section>
-
-        <section className='drinks_section'>
-          <h1>Bebidas</h1>
-          <section className='drink_list'>
-            {drinks?.map(({ id, name, description, price, type }) => {
-              return (
-                <Card
-                  key={id}
-                  name={name}
-                  description={description}
-                  price={price}
-                  type={type}
-                />
-              );
-            })}
-          </section>
+            </section>
+          )
+            : (
+              <h1 className='no_menu'>
+                Ops, parece que o <span>{restaurant?.name}</span> não publicou nenhuma bebida ainda :(
+              </h1>)}
         </section>
       </StyledRestaurant>
     </>

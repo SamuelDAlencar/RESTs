@@ -73,6 +73,17 @@ const StyledRestaurant = styled.section`
   .food_list button, .drink_list button {
   }
 
+  .no_menu {
+    text-align: center;
+    font-size: 150%;
+    margin: 50px;
+  }
+
+  .no_menu span {
+    color: #90B77D;
+    font-weight: bold;
+  }
+
   @media only screen and (max-width: 1200px) {
     .restInfo_section section h1 {
       font-size: 320%;
