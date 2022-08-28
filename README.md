@@ -111,7 +111,7 @@ Caso prefira não fazer registro, basta utilizar um destes 3 usuários já cadas
 
 Após logado e autenticado, basta conferir os restaurantes disponíveis e vasculhar seus cardápios 😋
 
-> ⚠ Tela de perfil ainda não implementada, então o botão que indica o perfil da navbar faz **logout** ⚠
+> Caso queira deslogar da aplicação, basta clicar no icone de perfil na navbar e clicar em "Sair"
 
 ## 📲 Bonus: versão mobile
 
