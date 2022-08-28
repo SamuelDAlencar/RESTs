@@ -166,8 +166,12 @@ const StyledHeader = styled.header`
   }
 
   @media only screen and (max-width: 768px) {
-    .login_button, .username, .logo_title {
+    .login_button, .username {
       display: none;
+    }
+
+    .logo_title {
+      display: ${props => !props.restaurant && 'none'};
     }
 
     .search_section {
@@ -213,7 +217,7 @@ const StyledHeader = styled.header`
     box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 10);
 
     .logo_title {
-      display: none;
+      display: ${props => !props.restaurant && 'none'};
     }
   }
 `;
