@@ -13,7 +13,7 @@ import drinkIcon from '../../images/drink.jpg';
 // Creditos da imagem: https://flyclipart.com/gps-location-map-pin-pin-restaurant-icon-restaurant-icon-png-237324
 import restaurantIcon from '../../images/restaurant.jpg';
 
-export default function ItemCard({ id, name, address, phone, description, price, type }) {
+export default function Card({ id, name, address, phone, description, price, type }) {
   const navigate = useNavigate();
 
   return (
@@ -56,9 +56,9 @@ export default function ItemCard({ id, name, address, phone, description, price,
   );
 }
 
-ItemCard.propTypes = {
-  id: PropTypes.number.isRequired,
-  type: PropTypes.type,
+Card.propTypes = {
+  id: PropTypes.number,
+  type: PropTypes.string,
   name: PropTypes.string,
   description: PropTypes.string,
   price: PropTypes.number,
