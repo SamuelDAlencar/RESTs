@@ -56,8 +56,6 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [x] Testes das "services"
   - [x] Testes das "models"
 
-> Obs: Projeto ainda recebendo alguns ajustes!
-
 ## 👷‍♂️ Testes
 
 Neste projeto está sendo feito uma cobertura de testes **unitários**, para testar a aplicação, entre na pasta que deseja testar (Front/Client: `./client`, Back/Servidor: `./server`) e rode o comando `npm test`
@@ -126,19 +124,19 @@ Ao alcancar uma resolução **menor ou igual a 500px**, a aplicação passará a
 
 ## 🧰 Technologies and tools used
 
-- Javascript](https://www.javascript.com/) - Programming language used
-- React](https://reactjs.org/) - Front-end componentization library
+- [Javascript](https://www.javascript.com/) - Programming language used
+- [React](https://reactjs.org/) - Front-end componentization library
 - [React Router](https://reactrouter.com/en/main) - React library for route management
-- ContextAPI](https://reactjs.org/docs/context.html) - React resource for state management
+- [ContextAPI](https://reactjs.org/docs/context.html) - React resource for state management
 - [React Icons](https://react-icons.github.io/react-icons/) - React icon library
 - [Styled Components](https://styled-components.com/) - React component styling library
 - [Node.js](https://nodejs.org/en/) - JS execution field for back-end
 - [Express.js](https://expressjs.com/) - Node.js framework
-- Sequelize](https://sequelize.org/) - ORM for MySQL relational database requests
+- [Sequelize](https://sequelize.org/) - ORM for MySQL relational database requests
 - [MySQL](https://www.mysql.com/) - Used relational database
-- Docker](https://www.docker.com/) - Containerization service
+- [Docker](https://www.docker.com/) - Containerization service
 - [Axios](https://axios-http.com/docs/intro) - Front-end API request library
-- Concurrently](https://www.npmjs.com/package/concurrently) - Package used to start up the front and back end simultaneously
+- [Concurrently](https://www.npmjs.com/package/concurrently) - Package used to start up the front and back end simultaneously
 - [Jsonwebtoken](https://jwt.io/) - Library used to generate user validation token
 - [md5](https://www.md5hashgenerator.com/) - Library that generates a hash from a payload
 - [joi](https://www.npmjs.com/package/joi) - Used to validate login fields
@@ -151,16 +149,16 @@ Ao alcancar uma resolução **menor ou igual a 500px**, a aplicação passará a
 ## ✅ Status
 
 *Front-end:*
-  - x] Responsive login page and email and password fields
+  - [x] Responsive login page and email and password fields
   - [x] Responsive registration page with email, password and user fields
-  - x] User and restaurant routes created
-  - Responsive home page listing all available restaurants in the bank
+  - [x] User and restaurant routes created
+  - [x] Responsive home page listing all available restaurants in the bank
   - [x] Styling of the restaurants in the home page
-  - x] Option to filter the restaurants through the search field (search by restaurant name, name or description of a dish)
-  - x] Restaurant's information screen accessible through a click on the restaurant's card
-  - x] Restaurant information screen showing the name, address and phone number of the restaurant, as well as the list of menu items (with name, description and price)
-  - x] Option in the navigation bar that allows the user to return to the "home".
-  - x] Option in the navigation bar that allows the user to log off from the application
+  - [x] Option to filter the restaurants through the search field (search by restaurant name, name or description of a dish)
+  - [x] Restaurant's information screen accessible through a click on the restaurant's card
+  - [x] Restaurant information screen showing the name, address and phone number of the restaurant, as well as the list of menu items (with name, description and price)
+  - [x] Option in the navigation bar that allows the user to return to the "home".
+  - [x] Option in the navigation bar that allows the user to log off from the application
   - [ ] Tests of the "login" page
   - [ ] Tests of the "register" page
   - [ ] Tests of the "home" page
@@ -170,18 +168,16 @@ Ao alcancar uma resolução **menor ou igual a 500px**, a aplicação passará a
   - [x] Creation of database structure and relationships
   - [x] Creation of the user and restaurants routes 
   - [x] Creation of the items route (including the route that brings the items according to the "id" of a restaurant)
-  - x] Populate the database with pre-registered users (e-mail and password encrypted), restaurants and their respective items
-  - x] On the login, validate previously if the e-mail is in the bank
-  - x] At home, validate if the user has access to the page through a token generated at login
-  - x] Controllers tests
+  - [x] Populate the database with pre-registered users (e-mail and password encrypted), restaurants and their respective items
+  - [x] On the login, validate previously if the e-mail is in the bank
+  - [x] At home, validate if the user has access to the page through a token generated at login
+  - [x] Controllers tests
   - [x] Services tests
   - [x] "models" tests
 
-> Note: Project still receiving some adjustments!
-
 ## 👷♂️ Testing
 
-In this project we are doing a **unitary** tests coverage, to test the application, enter the folder you want to test (Front/Client: `./client`, Back/Server: `./server`) and run the `npm test` command
+This project has a **unit tests** coverage, to test the application, enter the folder you want to test (Front/Client: `./client`, Back/Server: `./server`) and run the `npm test` command
 
 > Note: Front-end tests have not been created yet, check their status in the **✅ status** section of this readme
 
@@ -211,4 +207,34 @@ Via Docker:
 
   - Clone the project: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
   - Inside the root: `npm run compose:d`
-    > If you want to run the containers docked to the terminal to track their status, just run `npm run compose:up`, then pop up the b
+    > If you want to run the containers attached to the terminal to keep track of their status, just run `npm run compose:up`, then populate the database in another terminal with `npm run pre:start:server` in the root, or `npm run pre:start` if in the /server folder
+  - If no errors occur, go to the page and log in: `http://localhost:3000/login`
+
+No Docker:
+
+  - Clone the project: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
+  - In the root: `npm run install:apps`
+  - Still in root: `npm run start:apps`
+  - If no error occurs and the application has not yet opened in the browser, go to this URL and login: `http://localhost:3000/login`
+
+## 👩💻 Using the application
+
+Click the `"Register"` button when entering the application, and enter login data that is **not sensitive**.
+
+If you prefer not to register, just use one of these 3 users already registered in the bank:
+> (e-mail) - (password)
+  - User 1: `fred@graodireto.com.br - 123Fred`.
+  - User 2: `samuca@gmail.com - 1samu9`
+  - User 2: `gabribo@yahoo.com - gabribas5839`
+
+Once logged in and authenticated, simply check out the available restaurants and browse their menus 😋
+
+> If you want to logout from the application, just click on the profile icon in the navbar and click "Logout".
+
+## 📲 Bonus: mobile version
+
+By reaching a resolution **less than or equal to 500px**, the application will look like a mobile app
+
+<hr />
+
+> 🌟 I would be very happy to receive some improvement feedbacks 🥳 the project is being developed with great care 🌟
