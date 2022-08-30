@@ -1,5 +1,6 @@
-# 🍲 Spot
 # [🇧🇷 Português]
+
+# 🍲 Spot
 
 O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo gastronômico, que após logado (email e senha criptografados), traz para o usuário uma lista de restaurantes e suas respectivas informações, como endereço, número de telefone, e seus cardápios, contendo detalhes de cada item do menu como descrição e preço
 
@@ -121,6 +122,8 @@ Ao alcancar uma resolução **menor ou igual a 500px**, a aplicação passará a
 <hr />
 
 # [🇺🇸 English]
+
+# 🍲 Spot
 
 Spot is a fullstack project that consists in an MVP of a gastronomic application, that after logged in (email and password encrypted), brings to the user a list of restaurants and their respective information, such as address, phone number, and their menus, containing details of each menu item such as description and price
 
