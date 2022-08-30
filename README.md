@@ -7,6 +7,7 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 ## 🧰 Construído com:
 
 - [Javascript](https://www.javascript.com/) - Linguagem de programação utilizada
+- [Eslint](https://eslint.org/) - Ferramenta utilizada para manter um padrão de código uniforme
 - [React](https://reactjs.org/) - Biblioteca front-end para componentização
 - [React Router](https://reactrouter.com/en/main) - Biblioteca React para gerenciamento de rotas
 - [ContextAPI](https://reactjs.org/docs/context.html) - Recurso React para gerenciamento de estado
@@ -130,6 +131,7 @@ Spot is a fullstack project that consists in an MVP of a gastronomic application
 ## 🧰 Built with:
 
 - [Javascript](https://www.javascript.com/) - Programming language used
+- [Eslint](https://eslint.org/) - Tool used to maintain a uniform code pattern
 - [React](https://reactjs.org/) - Front-end componentization library
 - [React Router](https://reactrouter.com/en/main) - React library for route management
 - [ContextAPI](https://reactjs.org/docs/context.html) - React resource for state management
