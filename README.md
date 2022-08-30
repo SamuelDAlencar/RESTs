@@ -127,7 +127,7 @@ Ao alcancar uma resolução **menor ou igual a 500px**, a aplicação passará a
 
 Spot is a fullstack project that consists in an MVP of a gastronomic application, that after logged in (email and password encrypted), brings to the user a list of restaurants and their respective information, such as address, phone number, and their menus, containing details of each menu item such as description and price
 
-## 🧰 Technologies and tools used
+## 🧰 Built with:
 
 - [Javascript](https://www.javascript.com/) - Programming language used
 - [React](https://reactjs.org/) - Front-end componentization library
