@@ -212,5 +212,3 @@ Via Docker:
   - Clone the project: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
   - Inside the root: `npm run compose:d`
     > If you want to run the containers docked to the terminal to track their status, just run `npm run compose:up`, then pop up the b
-
-Translated with www.DeepL.com/Translator (free version)
