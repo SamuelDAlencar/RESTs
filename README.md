@@ -1,4 +1,5 @@
 # 🍲 Spot
+# [🇧🇷 Português]
 
 O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo gastronômico, que após logado (email e senha criptografados), traz para o usuário uma lista de restaurantes e suas respectivas informações, como endereço, número de telefone, e seus cardápios, contendo detalhes de cada item do menu como descrição e preço
 
@@ -117,6 +118,99 @@ Após logado e autenticado, basta conferir os restaurantes disponíveis e vascul
 
 Ao alcancar uma resolução **menor ou igual a 500px**, a aplicação passará a ter um visual que simula um app mobile
 
+> 🌟 Ficaria feliz demais em receber alguns feedbacks de melhoria 🥳 o projeto está sendo desenvolvido com muito carinho 🌟
+
 <hr />
 
-> 🌟 Ficaria feliz demais em receber alguns feedbacks de melhoria 🥳 o projeto está sendo desenvolvido com muito carinho 🌟
+# [🇺🇸 English]
+
+## 🧰 Technologies and tools used
+
+- Javascript](https://www.javascript.com/) - Programming language used
+- React](https://reactjs.org/) - Front-end componentization library
+- [React Router](https://reactrouter.com/en/main) - React library for route management
+- ContextAPI](https://reactjs.org/docs/context.html) - React resource for state management
+- [React Icons](https://react-icons.github.io/react-icons/) - React icon library
+- [Styled Components](https://styled-components.com/) - React component styling library
+- [Node.js](https://nodejs.org/en/) - JS execution field for back-end
+- [Express.js](https://expressjs.com/) - Node.js framework
+- Sequelize](https://sequelize.org/) - ORM for MySQL relational database requests
+- [MySQL](https://www.mysql.com/) - Used relational database
+- Docker](https://www.docker.com/) - Containerization service
+- [Axios](https://axios-http.com/docs/intro) - Front-end API request library
+- Concurrently](https://www.npmjs.com/package/concurrently) - Package used to start up the front and back end simultaneously
+- [Jsonwebtoken](https://jwt.io/) - Library used to generate user validation token
+- [md5](https://www.md5hashgenerator.com/) - Library that generates a hash from a payload
+- [joi](https://www.npmjs.com/package/joi) - Used to validate login fields
+- [Express Async Errors](https://www.npmjs.com/package/express-async-errors) - Catches asynchronous errors generated in express
+- [dotenv](https://www.npmjs.com/package/dotenv) - Allocate environment variables
+- [mocha](https://mochajs.org/) - Node.js testing framework
+- [chai](https://www.chaijs.com/) - Node.js assertion library
+- [sinon](https://sinonjs.org/) - JavaScript stubs and mocks library
+
+## ✅ Status
+
+*Front-end:*
+  - x] Responsive login page and email and password fields
+  - [x] Responsive registration page with email, password and user fields
+  - x] User and restaurant routes created
+  - Responsive home page listing all available restaurants in the bank
+  - [x] Styling of the restaurants in the home page
+  - x] Option to filter the restaurants through the search field (search by restaurant name, name or description of a dish)
+  - x] Restaurant's information screen accessible through a click on the restaurant's card
+  - x] Restaurant information screen showing the name, address and phone number of the restaurant, as well as the list of menu items (with name, description and price)
+  - x] Option in the navigation bar that allows the user to return to the "home".
+  - x] Option in the navigation bar that allows the user to log off from the application
+  - [ ] Tests of the "login" page
+  - [ ] Tests of the "register" page
+  - [ ] Tests of the "home" page
+  - [ ] Tests of the "restaurants" page
+
+*Back-end
+  - [x] Creation of database structure and relationships
+  - [x] Creation of the user and restaurants routes 
+  - [x] Creation of the items route (including the route that brings the items according to the "id" of a restaurant)
+  - x] Populate the database with pre-registered users (e-mail and password encrypted), restaurants and their respective items
+  - x] On the login, validate previously if the e-mail is in the bank
+  - x] At home, validate if the user has access to the page through a token generated at login
+  - x] Controllers tests
+  - [x] Services tests
+  - [x] "models" tests
+
+> Note: Project still receiving some adjustments!
+
+## 👷♂️ Testing
+
+In this project we are doing a **unitary** tests coverage, to test the application, enter the folder you want to test (Front/Client: `./client`, Back/Server: `./server`) and run the `npm test` command
+
+> Note: Front-end tests have not been created yet, check their status in the **✅ status** section of this readme
+
+## 👩💻 Access the project
+
+⚠🛠 Deploy not yet done :'( 🛠⚠
+
+## 💻 Prerequisites
+
+Before installing the application, if you choose to run the application via [Docker](https://www.docker.com/) check that you have:
+
+  - Version *equal* or *superior* to `1.13.1` of `Docker`
+  - Ports `3000`, `3001` and `3306` on your machine cleared
+  
+No Docker:
+
+  - Version *equal* or *greater* than `16` of `node`
+  - MySQL`](https://www.mysql.com/) instance running on port `3306`
+    > ⚠ Update the environment variables with your database password (.env file in the /server folder), and also the variables in the sequelize config file ( config file in the /server/database/config folder) ⚠
+  - Ports `3000` and `3001` on your machine cleared
+
+## 🚀 Installing locally
+
+Follow these commands in order *according to the method you choose*
+
+Via Docker:
+
+  - Clone the project: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
+  - Inside the root: `npm run compose:d`
+    > If you want to run the containers docked to the terminal to track their status, just run `npm run compose:up`, then pop up the b
+
+Translated with www.DeepL.com/Translator (free version)
