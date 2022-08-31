@@ -88,14 +88,14 @@ Siga esses os comandos em ordem *de acordo com o método que escolher*
 
 Via Docker:
 
-  - Clone o projeto: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
+  - Clone o projeto: `git clone git@github.com:SamuelDAlencar/spot.git`
   - Dentro da raiz: `npm run compose:d`
     > Caso queira rodar os containers acoplado ao terminal para acompanhar o status deles, rode somente `npm run compose:up`, e depois popule o banco em outro terminal com o comando `npm run pre:start:server` na raiz, ou `npm run pre:start` caso esteja na pasta /server
   - Caso não ocorra nenhum erro, acesse a página e faça login: `http://localhost:3000/login`
 
 Sem Docker:
 
-  - Clone o projeto: `git clone git@github.com:SamuelDAlencar/rest-listing_app.git`
+  - Clone o projeto: `git clone git@github.com:SamuelDAlencar/spot.git`
   - Dentro da raiz: `npm run install:apps`
   - Ainda na raiz: `npm run start:apps`
   - Caso não ocorra nenhum erro e a aplicação ainda não tenha aberto no browser, acesse essa URL e faça o login: `http://localhost:3000/login`
