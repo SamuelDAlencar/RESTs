@@ -9,10 +9,10 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 - [Javascript](https://www.javascript.com/) - Linguagem de programação utilizada
 - [Eslint](https://eslint.org/) - Ferramenta utilizada para manter um padrão de código uniforme
 - [React](https://reactjs.org/) - Biblioteca front-end para componentização
-- [React Router](https://reactrouter.com/en/main) - Biblioteca React para gerenciamento de rotas
-- [ContextAPI](https://reactjs.org/docs/context.html) - Recurso React para gerenciamento de estado
-- [React Icons](https://react-icons.github.io/react-icons/) - Biblioteca React de ícones
-- [Styled Components](https://styled-components.com/) - Biblioteca React para estilização de componentes
+  - [React Router](https://reactrouter.com/en/main) - Biblioteca React para gerenciamento de rotas
+  - [ContextAPI](https://reactjs.org/docs/context.html) - Recurso React para gerenciamento de estado
+  - [React Icons](https://react-icons.github.io/react-icons/) - Biblioteca React de ícones
+  - [Styled Components](https://styled-components.com/) - Biblioteca React para estilização de componentes
 - [Node.js](https://nodejs.org/en/) - Campo de execução JS para back-end
 - [Express.js](https://expressjs.com/) - Framework Node.js
 - [Sequelize](https://sequelize.org/) - ORM para requisições ao banco relacional MySQL
