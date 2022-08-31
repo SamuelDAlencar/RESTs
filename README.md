@@ -182,13 +182,13 @@ Spot is a fullstack project that consists in an MVP of a gastronomic application
   - [x] Services tests
   - [x] "models" tests
 
-## 👷♂️ Testing
+## 👷‍♂️ Testing
 
 This project has a **unit tests** coverage, to test the application, enter the folder you want to test (Front/Client: `./client`, Back/Server: `./server`) and run the `npm test` command
 
 > Note: Front-end tests have not been created yet, check their status in the **✅ status** section of this readme
 
-## 👩💻 Access the project
+## 👨‍💻 Access the project
 
 ⚠🛠 Deploy not yet done :'( 🛠⚠
 
@@ -224,7 +224,7 @@ No Docker:
   - Still in root: `npm run start:apps`
   - If no error occurs and the application has not yet opened in the browser, go to this URL and login: `http://localhost:3000/login`
 
-## 👩💻 Using the application
+## 👨‍💻 Using the application
 
 Click the `"Register"` button when entering the application, and enter login data that is **not sensitive**.
 
