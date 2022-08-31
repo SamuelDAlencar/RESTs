@@ -31,7 +31,7 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 
 ## ✅ Status
 
-*Front-end:*
+***Front-end:***
   - [x] Página de login responsiva e campos de email e senha
   - [x] Página de registro responsiva com campos de email, senha e usuário
   - [x] Rotas de usuário e de restaurantes criadas
@@ -47,7 +47,7 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [ ] Testes da página "home"
   - [ ] Testes da página "restaurants"
 
-*Back-end:*
+***Back-end:***
   - [x] Criação da estrutura e relacionamentos do banco de dados
   - [x] Criação das rotas de usuário e restaurantes 
   - [x] Criação da rota de itens (incluindo a rota que traz os itens de acordo com o "id" de um restaurante)
