@@ -14,7 +14,8 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
   - [React Icons](https://react-icons.github.io/react-icons/) - Biblioteca React de ícones
   - [Styled Components](https://styled-components.com/) - Biblioteca React para estilização de componentes
 - [Node.js](https://nodejs.org/en/) - Campo de execução JS para back-end
-- [Express.js](https://expressjs.com/) - Framework Node.js
+  - [Express.js](https://expressjs.com/) - Framework Node.js
+    - [Express Async Errors](https://www.npmjs.com/package/express-async-errors) - Captura erros assíncronos gerados no express
 - [Sequelize](https://sequelize.org/) - ORM para requisições ao banco relacional MySQL
 - [MySQL](https://www.mysql.com/) - Banco de dados relacional utilizado
 - [Docker](https://www.docker.com/) - Serviço de containerização
@@ -23,7 +24,6 @@ O Spot é um projeto fullstack que consiste em um MVP de uma aplicação do ramo
 - [Jsonwebtoken](https://jwt.io/) - Biblioteca utilizada para gerar token de validação do usuário
 - [md5](https://www.md5hashgenerator.com/) - Biblioteca que gera hash a partir de um payload
 - [joi](https://www.npmjs.com/package/joi) - Utilizada para validar campos de login
-- [Express Async Errors](https://www.npmjs.com/package/express-async-errors) - Captura erros assíncronos gerados no express
 - [dotenv](https://www.npmjs.com/package/dotenv) - Alocar variáveis de ambiente
 - [mocha](https://mochajs.org/) - Framework de testes Node.js
 - [chai](https://www.chaijs.com/) - Biblioteca de assertions Node.js
